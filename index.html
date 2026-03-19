@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未來之書 - Future Book</title>
+    <meta name="keywords" content="UFO,外星人,預言,克里昂,靈性成長,宇宙">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #00ff88;
+            --secondary: #ffd700;
+            --dark: #0a0a1a;
+            --darker: #050510;
+            --light: #ffffff;
+            --gray: #888;
+        }
+        
+        body {
+            font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+            background: var(--darker);
+            color: var(--light);
+            line-height: 1.8;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--darker) 100%);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        .logo span { color: var(--primary); }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+        
+        nav a:hover { color: var(--primary); }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(180deg, var(--dark) 0%, var(--darker) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(0,255,136,0.1) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        
+        .hero h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero p {
+            font-size: 24px;
+            color: var(--gray);
+            max-width: 600px;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, var(--primary), #00cc66);
+            color: var(--dark);
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,255,136,0.4);
+        }
+        
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: var(--primary);
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .about-card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        
+        .about-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+        
+        .about-card h3 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .kryon-section {
+            background: linear-gradient(135deg, rgba(0,255,136,0.1), rgba(255,215,0,0.1));
+            border-radius: 30px;
+            padding: 60px;
+            margin: 40px auto;
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 20px;
+            color: var(--primary);
+            border-left: 4px solid var(--secondary);
+            padding-left: 20px;
+            margin: 30px 0;
+        }
+        
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .video-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .video-card iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+        }
+        
+        .video-card h4 {
+            padding: 15px;
+            color: var(--secondary);
+        }
+        
+        .prophecy-list {
+            list-style: none;
+        }
+        
+        .prophecy-list li {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .prophecy-list h4 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 25px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 25px;
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+        
+        footer {
+            background: var(--dark);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 80px;
+        }
+        
+        footer p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 40px; }
+            .hero p { font-size: 18px; }
+            nav ul { gap: 15px; }
+            nav a { font-size: 14px; }
+            .kryon-section { padding: 30px; }
+            .section-title { font-size: 28px; }
+        }
+        
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: var(--dark);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 999;
+        }
+        
+        .scroll-top.visible { opacity: 1; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">🌌 <span>未來之書</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#home">首頁</a></li>
+                    <li><a href="#about">關於</a></li>
+                    <li><a href="#kryon">克里昂</a></li>
+                    <li><a href="#videos">影片</a></li>
+                    <li><a href="#contact">連結</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero" id="home">
+        <h1>🌍 探索宇宙的真理</h1>
+        <p>歡迎來到未來之書 - 探索UFO、外星人、克里昂訊息與靈性成長的平台</p>
+        <a href="#about" class="cta-button">開始探索</a>
+    </section>
+    
+    <section id="about">
+        <h2 class="section-title">✨ 關於未來之書</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>👽 UFO與外星人</h3>
+                <p>分享作者在哥斯大黎加親眼目睹UFO的經歷，以及30多年來收集的宇宙資訊。</p>
+            </div>
+            <div class="about-card">
+                <h3>📚 靈性書籍推薦</h3>
+                <p>推薦必讀的靈性書籍：克里昂系列、阿米星星的小孩、宇宙之心等，引導你走向光明的道路。</p>
+            </div>
+            <div class="about-card">
+                <h3>🔮 預言與啟示</h3>
+                <p>探索聖經預言與現代事件的呼應，以及時空大挪移的現象。</p>
+            </div>
+            <div class="about-card">
+                <h3>💫 靈魂煉金術</h3>
+                <p>學習用人類靈魂的煉金術，超越恐懼，選擇愛，迎接新時代的來臨。</p>
+            </div>
+            <div class="about-card">
+                <h3>🔮 金錢卦占卜</h3>
+                <p>傳統六爻占卜，擲三枚銅錢六次，獲得本卦與變卦的詳細解說，含事業、愛情、財運建議。</p>
+                <a href="divination.html" style="display:inline-block; margin-top:10px; color:var(--primary);">開始占卜 →</a>
+            </div>
+            <div class="about-card">
+                <h3>🌱 純素救地球遊戲</h3>
+                <p>一款環保主題網頁遊戲，吃純素食物守護地球，60秒內保持地球健康！</p>
+                <a href="game.html" style="display:inline-block; margin-top:10px; color:var(--primary);">開始遊戲 →</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="kryon" class="kryon-section">
+        <h2 class="section-title">🕯️ 克里昂訊息</h2>
+        <div class="quote">
+            「我是磁性服務團隊的克里昂。當你坐在這個殿堂里，你想要聽到來自帷幕另一邊的聲音，是嗎？」
+        </div>
+        <p>克里昂(Kryon)是來自織女星(Vega)的磁性服務團隊，透過靈媒李·卡羅爾(Lee Carroll)在世界各地傳遞訊息。他的訊息涵蓋：</p>
+        <ul style="margin-top: 20px; margin-left: 20px; color: var(--gray);">
+            <li>時空大挪移與全球意識轉變</li>
+            <li>人類DNA的進化與激活</li>
+            <li>地球揚升與新時代的來臨</li>
+            <li>愛與慈悲的宇宙法則</li>
+        </ul>
+        <p style="margin-top: 30px; color: var(--gray);">
+            克里昂在智利聖地牙哥的演講中提到：「智利是地震頻繁的地方，近年來地震等級平均值已降到7級以下。這個現象與全球意識的提升密切相關。」
+        </p>
+    </section>
+    
+    <section id="videos">
+        <h2 class="section-title">🎥 相關影片</h2>
+        <div class="video-container">
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/3GiK3BfJ34I" allowfullscreen></iframe>
+                <h4>我的UFO故事 - 宇宙架構與平行空間</h4>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/jNXXJ_T61yA" allowfullscreen></iframe>
+                <h4>克里昂 - 時空挪移</h4>
+            </div>
+        </div>
+    </section>
+    
+    <section id="prophecy">
+        <h2 class="section-title">📜 預言真言</h2>
+        <ul class="prophecy-list">
+            <li>
+                <h4>預言就是希望它不要發生</h4>
+                <p>聖經中約拿的故事告訴我們：當人們真心悔改，上帝會改變心意，不降災難於他們。預言聽聽，姑妄聽之。但如果世界沒有那麼多麻煩事，大家真心和愛心治理國家，誰會想相信末日預言呢？</p>
+            </li>
+            <li>
+                <h4>選擇與淘汰</h4>
+                <p>「這些無秩序和懷疑，選擇與淘汰年帶里爾將會帶你至死亡。誰懷著卑微在追尋真理，將會發現智慧。誰用仁慈的行為將會獲得幸福。」</p>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2 class="section-title">🔗 社群連結</h2>
+        <p style="text-align: center; color: var(--gray); margin-bottom: 30px;">
+            歡迎各位同好定期流覽，加入我們的行列！<br>
+            將您的閱讀心得隨時記錄下來，討論軍事和平之道
+        </p>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@futurebook" target="_blank" class="social-link">📺 YouTube</a>
+            <a href="https://zh-tw.facebook.com/futurebook" target="_blank" class="social-link">📘 Facebook</a>
+            <a href="https://twitter.com/cowperc" target="_blank" class="social-link">🐦 Twitter</a>
+            <a href="https://www.tiktok.com/@cowperc" target="_blank" class="social-link">🎵 TikTok</a>
+            <a href="https://space.bilibili.com/31199482" target="_blank" class="social-link">🎬 B站</a>
+            <a href="https://www.xiaohongshu.com/user/profile/667f71ea000000000303172e" target="_blank" class="social-link">📕 小紅書</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>🌌 未來之書 - 探索宇宙真理 | 預言聽聽 姑妄聽之</p>
+        <p style="margin-top: 10px;">克里昂說：「你代表的是一個要得到承諾和肯定的造物者，她就站在心頭的斷崖邊緣，等著你開門讓她進來。」</p>
+    </footer>
+    
+    <button class="scroll-top" onclick="scrollToTop()">↑</button>
+    
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        window.addEventListener('scroll', () => {
+            const scrollBtn = document.querySelector('.scroll-top');
+            if (window.scrollY > 500) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        document.querySelectorAll('.about-card, .video-card, .prophecy-list li').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
