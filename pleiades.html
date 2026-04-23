@@ -87,6 +87,16 @@
     </style>
 </head>
 <body>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'zh-TW';
+        document.querySelectorAll('a[href]').forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('http') && !href.includes('?')) {
+                link.setAttribute('href', href + '?lang=' + lang);
+            }
+        });
+    </script>
     <div class="container">
         <a href="index.html" class="back-link">← 返回首頁</a>
         

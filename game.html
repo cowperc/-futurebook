@@ -1,45 +1,297 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>純素救地球</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🥬 純素救地球 - 未來之書</title>
+    <meta name="keywords" content="纯素,环保,游戏,地球">
     <style>
-        body{font-family:sans-serif;background:#1a1a2e;color:#fff;display:flex;flex-direction:column;align-items:center;min-height:100vh;margin:0;padding:20px}
-        h1{color:#4ade80}
-        #s{display:flex;gap:20px;font-size:20px;margin-bottom:20px}
-        .st{background:rgba(255,255,255,.1);padding:10px 20px;border-radius:10px}
-        #g{width:100%;max-width:500px;height:400px;background:rgba(0,0,0,.3);border-radius:15px;position:relative;overflow:hidden;cursor:crosshair;border:2px solid #4ade80}
-        #e{position:absolute;width:60px;height:60px;background:#4ade80;border-radius:50%;top:10px;left:50%;transform:translateX(-50%);box-shadow:0 0 20px #4ade80}
-        #e.d{background:#ef4444;box-shadow:0 0 20px #ef4444;animation:sh .2s infinite}
-        @keyframes sh{0%,100%{transform:translateX(-50%) rotate(0)}25%{transform:translateX(-52%) rotate(-3deg)}75%{transform:translateX(-48%) rotate(3deg)}}
-        #m{position:absolute;font-size:35px;pointer-events:none;transform:translate(-50%,-50%)}
-        .f{position:absolute;font-size:30px;animation:fa 2.5s linear forwards}
-        @keyframes fa{from{top:-30px}to{top:420px}}
-        .v{color:#4ade80}
-        .n{color:#ef4444}
-        #st,#en{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:10}
-        #en{display:none}
-        button{background:#4ade80;color:#1a1a2e;border:none;padding:12px 30px;font-size:18px;border-radius:25px;font-weight:bold;cursor:pointer}
-        button:hover{transform:scale(1.05)}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #00ff88;
+            --danger: #ef4444;
+            --dark: #0a0a1a;
+            --darker: #050510;
+            --light: #ffffff;
+        }
+        body {
+            font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: var(--light);
+        }
+        h1 { color: var(--primary); margin-bottom: 10px; }
+        #stats {
+            display: flex;
+            gap: 30px;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .stat { 
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .stat span { color: var(--primary); font-weight: bold; }
+        #game-container {
+            width: 100%;
+            max-width: 600px;
+            height: 500px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            cursor: none;
+            border: 2px solid var(--primary);
+        }
+        #earth {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, #00ff88 0%, #22c55e 50%, #16a34a 100%);
+            border-radius: 50%;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 30px var(--primary);
+            transition: all 0.3s;
+            z-index: 10;
+        }
+        #earth.danger {
+            background: radial-gradient(circle, #ef4444 0%, #dc2626 50%, #991b1b 100%);
+            box-shadow: 0 0 30px #ef4444;
+            animation: shake 0.5s infinite;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(-50%) rotate(0); }
+            25% { transform: translateX(-52%) rotate(-5deg); }
+            75% { transform: translateX(-48%) rotate(5deg); }
+        }
+        #mouth {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+            transition: transform 0.05s;
+        }
+        .food {
+            position: absolute;
+            font-size: 35px;
+            cursor: pointer;
+            animation: fall 3s linear forwards;
+        }
+        @keyframes fall {
+            from { top: -40px; }
+            to { top: 520px; }
+        }
+        #start-screen, #game-over {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            z-index: 200;
+            text-align: center;
+            padding: 20px;
+        }
+        #game-over { display: none; }
+        button {
+            background: var(--primary);
+            color: var(--dark);
+            border: none;
+            padding: 15px 40px;
+            font-size: 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        button:hover { transform: scale(1.1); }
+        .vegan { color: var(--primary); }
+        .meat { color: var(--danger); }
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 16px;
+            z-index: 300;
+        }
+        .back-link:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <h1>🌍 純素救地球</h1>
-    <div id="s"><div class="st">分:<span id="sc">0</span></div><div class="st">時:<span id="tm">60</span></div></div>
-    <div id="g"><div id="e"></div><div id="m">👄</div>
-        <div id="st"><h2>吃純素救地球!</h2><p>🥬🥕🍎=素 ✅ | 🍖🥩🥗=肉 ❌</p><button onclick="play()">開始</button></div>
-        <div id="en"><h2 style="color:#ef4444">💥地球爆炸!</h2><p>分數:<span id="fs">0</span></p><button onclick="play()">再試</button></div>
-    </div>
     <script>
-        const v=['🥬','🥕','🍎','🍇','🥑','🍊','🍓','🍌','🥦','🍒','🥝','🫐'],n=['🍖','🍗','🥩','🐟','🦐','🦞','🦀','🐓','🦆','🐑','🐄','🐖'];
-        let sc=0,tm=60,run=false,gi,fi;
-        const g=document.getElementById('g'),e=document.getElementById('e'),m=document.getElementById('m');
-        g.onmousemove=e=>{m.style.left=(e.clientX-g.getBoundingClientRect().left)+'px';m.style.top=(e.clientY-g.getBoundingClientRect().top)+'px'};
-        g.onclick=e=>{if(!run)return;const x=e.clientX-g.getBoundingClientRect().left,y=e.clientY-g.getBoundingClientRect().top;document.querySelectorAll('.f').forEach(f=>{const d=Math.hypot(x-parseFloat(f.style.left)-15,y-parseFloat(f.style.top)-15);if(d<35)eat(f)})};
-        function play(){sc=0;tm=60;run=true;document.getElementById('sc').innerText=0;document.getElementById('tm').innerText=60;document.getElementById('st').style.display='none';document.getElementById('en').style.display='none';e.classList.remove('d');document.querySelectorAll('.f').forEach(f=>f.remove());clearInterval(gi);clearInterval(fi);gi=setInterval(()=>{tm--;document.getElementById('tm').innerText=tm;if(tm<=10)e.classList.add('d');if(tm<=0)end()},1000);fi=setInterval(spawn,700)}
-        function spawn(){if(!run)return;const f=document.createElement('div');f.className='f '+(Math.random()>.4?'v':'n');f.textContent=(Math.random()>.4?v:n)[Math.floor(Math.random()*12)];f.style.left=Math.random()*(g.offsetWidth-40)+'px';g.appendChild(f);f.onanimationend=()=>f.remove()}
-        function eat(f){sc+=(f.classList.contains('v')?10:-20);sc=Math.max(0,sc);document.getElementById('sc').innerText=sc;m.textContent=f.classList.contains('v')?'😋':'🤮';setTimeout(()=>m.textContent='👄',200);if(!f.classList.contains('v')){e.classList.add('d');setTimeout(()=>e.classList.remove('d'),400)}f.remove()}
-        function end(){run=false;clearInterval(gi);clearInterval(fi);document.getElementById('fs').innerText=sc;document.getElementById('en').style.display='flex'}
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'zh-TW';
+        document.querySelectorAll('a[href]').forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('http') && !href.includes('?')) {
+                link.setAttribute('href', href + '?lang=' + lang);
+            }
+        });
+    </script>
+    <a href="index.html" class="back-link">← 返回首頁</a>
+    <h1>🌍 純素救地球</h1>
+    <div id="stats">
+        <div class="stat">分數: <span id="score">0</span></div>
+        <div class="stat">時間: <span id="time">60</span></div>
+    </div>
+    <div id="game-container">
+        <div id="earth"></div>
+        <div id="mouth">👄</div>
+        
+        <div id="start-screen">
+            <h2>🥗 吃純素食物拯救地球！</h2>
+            <p style="margin: 20px; text-align: center;">
+                ✅ 蔬菜水果：🥬🥕🍎🍇🥑🥦<br>
+                ❌ 肉類：🍖🍗🥩🐟🦐
+            </p>
+            <button onclick="startGame()">開始遊戲 🎮</button>
+        </div>
+        
+        <div id="game-over">
+            <h2 style="color: #ef4444;">💥 地球爆炸了！</h2>
+            <p style="margin: 20px;">最終分數: <span id="final-score" style="color: var(--primary); font-size: 30px;">0</span></p>
+            <button onclick="startGame()">再試一次 🔄</button>
+        </div>
+    </div>
+
+    <script>
+        const veganFoods = ['🥬', '🥕', '🍎', '🍇', '🥑', '🍊', '🍓', '🍌', '🥦', '🍒', '🥝', '🫐', '🍑', '🍐', '🧅', '🍆', '🧄', '🌶️', '🥒', '🌽'];
+        const meatFoods = ['🍖', '🍗', '🥩', '🐟', '🦐', '🦞', '🦀', '🐌', '🐓', '🦆', '🦅', '🐑', '🐐', '🐄', '🐖', '🐃', '🦬', '🐕', '🐈', '🐩'];
+        
+        let score = 0;
+        let timeLeft = 60;
+        let gameRunning = false;
+        let gameInterval, foodInterval;
+        
+        const container = document.getElementById('game-container');
+        const mouth = document.getElementById('mouth');
+        const earth = document.getElementById('earth');
+        
+        container.addEventListener('mousemove', (e) => {
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            mouth.style.left = x + 'px';
+            mouth.style.top = y + 'px';
+        });
+        
+        container.addEventListener('click', (e) => {
+            if (!gameRunning) return;
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const foods = document.querySelectorAll('.food');
+            foods.forEach(food => {
+                const foodRect = food.getBoundingClientRect();
+                const containerRect = container.getBoundingClientRect();
+                const fx = foodRect.left - containerRect.left + 20;
+                const fy = foodRect.top - containerRect.top + 20;
+                
+                const dist = Math.sqrt((x - fx) ** 2 + (y - fy) ** 2);
+                if (dist < 40) {
+                    eat(food);
+                }
+            });
+        });
+        
+        function startGame() {
+            score = 0;
+            timeLeft = 60;
+            gameRunning = true;
+            
+            document.getElementById('score').textContent = '0';
+            document.getElementById('time').textContent = '60';
+            document.getElementById('start-screen').style.display = 'none';
+            document.getElementById('game-over').style.display = 'none';
+            
+            const foods = document.querySelectorAll('.food');
+            foods.forEach(f => f.remove());
+            
+            clearInterval(gameInterval);
+            clearInterval(foodInterval);
+            
+            gameInterval = setInterval(() => {
+                timeLeft--;
+                document.getElementById('time').textContent = timeLeft;
+                if (timeLeft <= 0) {
+                    endGame();
+                }
+                if (timeLeft <= 10) {
+                    earth.classList.add('danger');
+                }
+            }, 1000);
+            
+            foodInterval = setInterval(spawnFood, 800);
+        }
+        
+        function spawnFood() {
+            if (!gameRunning) return;
+            
+            const isVegan = Math.random() > 0.4;
+            const foods = isVegan ? veganFoods : meatFoods;
+            const food = foods[Math.floor(Math.random() * foods.length)];
+            
+            const el = document.createElement('div');
+            el.className = 'food ' + (isVegan ? 'vegan' : 'meat');
+            el.textContent = food;
+            el.style.left = Math.random() * (container.offsetWidth - 40) + 'px';
+            el.style.animationDuration = (2 + Math.random()) + 's';
+            
+            container.appendChild(el);
+            
+            el.addEventListener('animationend', () => el.remove());
+        }
+        
+        function eat(food) {
+            const isVegan = food.classList.contains('vegan');
+            score += isVegan ? 10 : -20;
+            score = Math.max(0, score);
+            
+            document.getElementById('score').textContent = score;
+            
+            if (isVegan) {
+                mouth.textContent = '😋';
+                setTimeout(() => mouth.textContent = '👄', 200);
+            } else {
+                mouth.textContent = '🤮';
+                setTimeout(() => mouth.textContent = '👄', 200);
+                earth.classList.add('danger');
+                setTimeout(() => earth.classList.remove('danger'), 500);
+            }
+            
+            food.remove();
+        }
+        
+        function endGame() {
+            gameRunning = false;
+            clearInterval(gameInterval);
+            clearInterval(foodInterval);
+            
+            document.getElementById('final-score').textContent = score;
+            document.getElementById('game-over').style.display = 'flex';
+            earth.classList.remove('danger');
+        }
     </script>
 </body>
 </html>
