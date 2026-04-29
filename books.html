@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>靈性書籍推薦 - 未來之書</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #00ff88;
+            --secondary: #ffd700;
+            --dark: #0a0a1a;
+            --darker: #050510;
+            --light: #ffffff;
+            --gray: #888;
+        }
+        body {
+            font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+            background: var(--darker);
+            color: var(--light);
+            line-height: 1.8;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { color: var(--secondary); margin-bottom: 10px; }
+        .subtitle { color: var(--gray); margin-bottom: 30px; }
+        .back-link { color: var(--primary); text-decoration: none; font-size: 16px; }
+        .back-link:hover { text-decoration: underline; }
+        .content { background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; margin-top: 20px; }
+        .content h2 { color: var(--primary); margin: 30px 0 15px; font-size: 22px; }
+        .content p { color: #ccc; margin: 10px 0; }
+        .book-box { background: rgba(0,255,136,0.1); border-radius: 15px; padding: 20px; margin: 20px 0; }
+        .book-box h3 { color: var(--primary); margin-bottom: 10px; }
+        .book-box p { color: #aaa; }
+        .note { text-align: center; color: var(--gray); margin-top: 40px; padding: 20px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'zh-TW';
+        document.querySelectorAll('a[href]').forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('http') && !href.includes('?')) {
+                link.setAttribute('href', href + '?lang=' + lang);
+            }
+        });
+    </script>
+    <div class="container">
+        <a href="index.html" class="back-link">← 返回首頁</a>
+        
+        <h1>📚 靈性書籍推薦</h1>
+        <p class="subtitle">引導你走向光明的道路</p>
+        
+        <div class="content">
+            <h2>🌟 克里昂系列 (Kryon)</h2>
+            <div class="book-box">
+                <h3>《克里昂書系列》</h3>
+                <p>作者：李·卡羅 (Lee Carroll)</p>
+                <p>克里昂是來自織女星(Vega)的磁性服務團隊，透過靈媒李·卡羅在世界各地傳遞訊息。訊息涵蓋人類DNA進化、地球揚升、靈性覺醒等主題。</p>
+            </div>
+            
+            <h2>👽 阿米星星的小孩 (The Little Prince)</h2>
+            <div class="book-box">
+                <h3>《小王子》</h3>
+                <p>作者：安東尼·德·聖修伯里</p>
+                <p>是一部充滿哲理與愛的經典童話，講述B-612星球上的小王子拜訪各個星球的故事，探討愛、責任與本質。</p>
+            </div>
+            
+            <h2>🌌 宇宙之心</h2>
+            <div class="book-box">
+                <h3>《宇宙之心》</h3>
+                <p>探索宇宙的起源與意識，講述人類與宇宙的連結。</p>
+            </div>
+            
+            <h2>📖 更多推薦</h2>
+            <div class="book-box">
+                <h3>靈性成長書單</h3>
+                <p>• 《當下的力量》- 艾克哈特·托勒<br>
+                • 《靈魂的暗道》- 萊斯特·萊文森<br>
+                • 《塞托瑪地》- 羅伯特·安東尼<br>
+                • 《與神對話》- 尼爾·唐納德·沃爾<br>
+                • 《奇蹟課程》</p>
+            </div>
+            
+            <h2>🔗 線上資源</h2>
+            <div class="book-box">
+                <h3>相關網站</h3>
+                <p>• Kryon 官網: kryon.com<br>
+                • 昴宿星人資訊: geocities.ws/futureufo/<br>
+                • 未來之書: futurebook-phi.vercel.app</p>
+            </div>
+        </div>
+        
+        <p class="note">
+            預言聽聽，姑妄聽之。請保持理性判斷。
+        </p>
+    </div>
+</body>
+</html>

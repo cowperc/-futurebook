@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的UFO故事 - 未來之書</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #00ff88;
+            --secondary: #ffd700;
+            --dark: #0a0a1a;
+            --darker: #050510;
+            --light: #ffffff;
+            --gray: #888;
+        }
+        body {
+            font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+            background: var(--darker);
+            color: var(--light);
+            line-height: 1.8;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { color: var(--secondary); margin-bottom: 10px; }
+        .subtitle { color: var(--gray); margin-bottom: 30px; }
+        .back-link { color: var(--primary); text-decoration: none; font-size: 16px; }
+        .back-link:hover { text-decoration: underline; }
+        .content { background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; margin-top: 20px; }
+        .content h2 { color: var(--primary); margin: 30px 0 15px; font-size: 22px; }
+        .content p { color: #ccc; margin: 10px 0; text-align: justify; }
+        .highlight { background: rgba(255,215,0,0.1); border-left: 4px solid var(--secondary); padding: 15px 20px; margin: 20px 0; }
+        .story-box { background: rgba(0,255,136,0.1); border-radius: 15px; padding: 20px; margin: 20px 0; }
+        .story-box h3 { color: var(--primary); margin-bottom: 10px; }
+        .warning { background: rgba(239,68,68,0.1); border-left: 4px solid #ef4444; padding: 15px 20px; margin: 20px 0; }
+        .note { text-align: center; color: var(--gray); margin-top: 40px; padding: 20px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'zh-TW';
+        document.querySelectorAll('a[href]').forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('http') && !href.includes('?')) {
+                link.setAttribute('href', href + '?lang=' + lang);
+            }
+        });
+    </script>
+    <div class="container">
+        <a href="index.html" class="back-link">← 返回首頁</a>
+        
+        <h1>👽 我的UFO故事</h1>
+        <p class="subtitle">作者在哥斯大黎加親眼目睹UFO的經歷</p>
+        
+        <div class="content">
+            <div class="highlight">
+                <strong>這是作者的親身經歷——</strong>30多年來收集的宇宙資訊與UFO接觸經驗。分享給對於宇宙真相有興趣的朋友們。
+            </div>
+            
+            <h2>🌟 親眼目睹的經歷</h2>
+            <div class="story-box">
+                <h3>哥斯大黎加的相遇</h3>
+                <p>作者在哥斯大黎加期間，曾親眼目睹不明飛行物體（UFO）。這次經歷徹底改變了作者對於宇宙的認知，並開始收集相關資訊。</p>
+            </div>
+            
+            <div class="story-box">
+                <h3>30多年的研究</h3>
+                <p>自那次相遇後，作者開始收集來自世界各地的UFO資訊，包括：</p>
+                <p>• 昴宿星人接觸報告<br>
+                • 克里昂訊息<br>
+                • 各國軍方解密檔案<br>
+                • 飛碟研究者資料<br>
+                • 預言與啟示</p>
+            </div>
+            
+            <h2>🛸 接觸的外星種族</h2>
+            <p>根據30多年的研究，主要的外星種族包括：</p>
+            <p>• <strong>昴宿星人</strong> - 來自金牛座昴宿星團，強調靈性與和平<br>
+            • <strong>克里昂</strong> - 來自織女星，透過靈媒傳遞訊息<br>
+            • <strong>網罟座人</strong> - 來自網罟座，發展仿生人科技<br>
+            • <strong>天龍人</strong> - 來自天龍星座的古老種族</p>
+            
+            <h2>📚 更多故事</h2>
+            <div class="story-box">
+                <h3>完整版部落格文章</h3>
+                <p>更多詳細故事，請查看作者的部落格：</p>
+                <a href="https://cowperc.blogspot.com/2014/02/ufo.html" target="_blank" style="color:var(--primary);">我的UFO故事告訴你宇宙的架構與平行空間 →</a>
+            </div>
+            
+            <h2>🌟 前世記憶</h2>
+            <div class="story-box">
+                <h3>道士轉世</h3>
+                <p>作者在前世打坐中看見自己是一位道士，曾居住在江西龍虎山。前世記憶包括：</p>
+                <p>• 前世是北宋道士張繼先<br>
+                • 在龍虎山修行<br>
+                • 曾在海底與蛟龍(尼斯湖水怪)相遇<br>
+                • 救過一名女子今生成為妻子</p>
+            </div>
+            
+            <div class="story-box">
+                <h3>多次轉世</h3>
+                <p>作者的前世包括：</p>
+                <p>• 南朝皇帝<br>
+                • 砍柴老人(後成為開國皇帝)<br>
+                • 北宋張天師<br>
+                • 多世道士</p>
+            </div>
+            
+            <h2>🌌 平行宇宙</h2>
+            <div class="story-box">
+                <h3>D1-D12 多維空間</h3>
+                <p>作者曾“意識被帶入宇宙司令部的模擬系統，看到多個平行空間：</p>
+                <p>• D1空間：美國，太陽將熄滅<br>
+                • D2空間：宗教壓迫艱苦世界<br>
+                • D3空間：藝術烏托邦<br>
+                • D7空間：獅人守護者<br>
+                • D12空間：我們現在的地球</p>
+            </div>
+            
+            <h2>⚡ 地球網格</h2>
+            <div class="story-box">
+                <h3>靈魂輪回系統</h3>
+                <p>地球被一層發光網格包裹，影響人類輪回：</p>
+                <p>• 靈魂經過投生石洗掉前世記憶<br>
+                • 網格根據12磁區賦予個性編碼<br>
+                • 星座反映磁區能量狀態<br>
+                • 少數人可成功脫離網格</p>
+            </div>
+            
+            <h2>💡 光子靈魂原理</h2>
+            <div class="story-box">
+                <h3>光子結構</h3>
+                <p>根據接觸資訊：</p>
+                <p>• 靈魂由光子組成<br>
+                • DNA含有一個光子<br>
+                • 光子記錄一世所有事情<br>
+                • 意識形態決定光的顏色<br>
+                • 人的光可以治療地球</p>
+            </div>
+            
+            <h2>🔺 金字塔秘密</h2>
+            <div class="story-box">
+                <h3>UFO充能系統</h3>
+                <p>金字塔不是法老墓穴，而是UFO的充能場所：</p>
+                <p>• 外星人用金字塔為UFO補充能源<br>
+                • 可收集宇宙網格能量轉換為電能<br>
+                • 隱藏在世界各地公司和偏遠處<br>
+                • 是最環保的能源方式</p>
+            </div>
+            
+            <h2>🛸 首次接觸經過</h2>
+            <div class="story-box">
+                <h3>1997年哥斯大黎加</h3>
+                <p>1997年，作者在哥斯大黎加的經歷：</p>
+                <p>• 9月黃昏看見UFO<br>
+                • UFO感知人類想法，召來烏雲隱藏<br>
+                • 當晚燈光忽明忽暗<br>
+                • 聽到規律信號聲<br>
+                • 被��行注入宇宙知識<br>
+                • 此後UFO在聖何塞停留數月</p>
+            </div>
+            
+            <h2>📖 克里昂訊息</h2>
+            <div class="story-box">
+                <h3>外星人名師指導</h3>
+                <p>作者後來接觸的克里昂訊息：</p>
+                <p>• 頭髮每絲都是白光<br>
+                • 教授宇宙能源飛行單車<br>
+                • 2014年後靈性被加強<br>
+                • 宗教與真理是兩回事<br>
+                • 用邏輯判斷非迷信</p>
+            </div>
+            
+            <h2>🔭 星座與神話</h2>
+            <div class="story-box">
+                <h3>十二星座與太陽</h3>
+                <p>太陽經過12個星座區域時，會影響地球磁格與人類意識：</p>
+                <p>• 牡羊座 (3/21-4/19) - 獅子座守護<br>
+                • 金牛座 (4/20-5/20) - 金星守護<br>
+                • 雙子座 (5/21-6/20) - 水星守護<br>
+                • 巨蟹座 (6/21-7/22) - 月亮守護<br>
+                • 獅子座 (7/23-8/22) - 太陽守護<br>
+                • 處女座 (8/23-9/22) - 水星守護<br>
+                • 天秤座 (9/23-10/22) - 金星守護<br>
+                • 天蠍座 (10/23-11/21) - 冥王星守護<br>
+                • 射手座 (11/22-12/21) - 木星守護<br>
+                • 摩羯座 (12/22-1/19) - 土星守護<br>
+                • 水瓶座 (1/20-2/18) - 土星/天王星守護<br>
+                • 雙魚座 (2/19-3/20) - 海王星守護</p>
+            </div>
+            
+            <div class="story-box">
+                <h3>重要星座傳說</h3>
+                <p>獵戶座 Orion：希臘神話中的偉大獵人，与大犬座、小犬座相关<br>
+                大熊座 Ursa Major：包含北斗七星，傳說與宙斯有關<br>
+                天琴座 Lyra：俄耳甫斯與歐瑞狄刻的悲劇故事<br>
+                飛馬座 Pegasus：英雄柏勒羅豐的坐騎<br>
+                天龍座 Draco：希臘神話中的龍<br>
+                鳳凰座 Phoenix：火鳥，每500年從灰燼中重生</p>
+            </div>
+            
+            <div class="story-box">
+                <h3>地球磁格系統</h3>
+                <p>地球被12個磁區包圍，與12星座對應：</p>
+                <p>這12個區域會影響人類的個性與命運。<br>
+                太陽、月亮和其他行星的運行會不斷改變這些磁區的能量，進而影響每個人的性格與選擇。<br>
+                這就是為何「星座算命有時會準」——因為它反映的是磁區能量狀態。</p>
+            </div>
+            
+            <h2>📺 UFO影片</h2>
+            <div class="story-box">
+                <h3>公開的UFO影片</h3>
+                <p>來源：geocities.ws/futureufo/start.htm</p>
+                <p>更多UFO影片可參考：universe-people.com</p>
+            </div>
+            
+            <h2>🌍 哥斯大黎加</h2>
+            <p>哥斯大黎加是一個充滿靈性能量的國家，也是許多UFO接觸案例發生的地點。這裡沒有軍隊，卻有著豐富的自然資源和高意識的人民。</p>
+            
+            <div class="warning">
+                <strong>⚠️ 聲明：</strong>這些都是作者的個人經歷與研究，仅供參考。請保持理性判断，不要過度迷信。每個人都有權利選擇自己的信念。
+            </div>
+            
+            <h2>💬 訊息</h2>
+            <div class="highlight">
+                <p>無論您是否相信這些資訊，都歡迎您探索宇宙的真相。保持開放的心態，但也要用理性判斷。</p>
+                <p><strong>預言聽聽，姑妄聽之。</strong></p>
+            </div>
+        </div>
+        
+        <p class="note">
+            版權所有：未來之書<br>
+            資料來源：個人經歷與 30多年研究
+        </p>
+    </div>
+</body>
+</html>

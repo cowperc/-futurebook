@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔮 金錢卦占卜</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Microsoft JhengHei', sans-serif;
+            background: #0a0a1a;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        h1 { color: #00ff88; margin-bottom: 10px; }
+        .box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            margin: 20px 0;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid #00ff88;
+            background: #1a1a2e;
+            color: white;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        button {
+            background: #00ff88;
+            color: #0a0a1a;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover { transform: scale(1.05); }
+        .coins { display: flex; justify-content: center; gap: 15px; margin: 20px; }
+        .coin {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffd700, #cc9900);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #333;
+        }
+        .coin.yang { background: linear-gradient(135deg, #ffd700, #cc9900); }
+        .coin.yin { background: linear-gradient(135deg, #666, #333); }
+        .lines { display: flex; flex-direction: column; gap: 5px; margin: 20px 0; }
+        .line {
+            width: 100px;
+            height: 8px;
+            background: #00ff88;
+            border-radius: 4px;
+            margin: 0 auto;
+        }
+        .line.broken { background: transparent; width: 100px; height: 8px; position: relative; }
+        .line.broken::before, .line.broken::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 8px;
+            background: #00ff88;
+            top: 0;
+        }
+        .line.broken::before { left: 0; }
+        .line.broken::after { right: 0; }
+        .line.old { background: #ffd700; }
+        .line.old.broken::before, .line.old.broken::after { background: #ffd700; }
+        .result { text-align: left; }
+        .result h3 { color: #ffd700; margin: 15px 0 10px; }
+        .result p { color: #aaa; margin: 8px 0; }
+        .yuan { font-size: 12px; color: #666; margin-top: 20px; }
+        a { color: #00ff88; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'zh-TW';
+        document.querySelectorAll('a[href]').forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('http') && !href.includes('?')) {
+                link.setAttribute('href', href + '?lang=' + lang);
+            }
+        });
+    </script>
+    <a href="index.html">← 返回首頁</a>
+    <h1>🔮 金錢卦占卜</h1>
+    
+    <div class="box" id="startBox">
+        <p>請在心裡默念想占問的事</p>
+        <input type="text" id="question" placeholder="例如：我的事業運勢如何？">
+        <button onclick="start()">開始擲杯</button>
+    </div>
+    
+    <div class="box" id="tossBox" style="display:none;">
+        <h3>第 <span id="step">1</span> / 6 爻</h3>
+        <div class="coins">
+            <div class="coin" id="c1"></div>
+            <div class="coin" id="c2"></div>
+            <div class="coin" id="c3"></div>
+        </div>
+        <button onclick="toss()">擲幣</button>
+    </div>
+    
+    <div class="box" id="resultBox" style="display:none;">
+        <h2>🏆 結果</h2>
+        <h3 id="qText" style="color:#aaa;"></h3>
+        <div class="lines" id="gua"></div>
+        <div class="result" id="resultText"></div>
+        <button onclick="reset()">再占一次</button>
+    </div>
+
+    <script>
+        const names = ['乾為天', '坤為地', '水雷屯', '山水蒙', '水天需', '天水讼', '師', '比', '小畜', '履', '泰', '否', '同人', '大有', '謙', '豫', '隨', '蠱', '臨', '觀', '噬嗑', '賁', '剝', '復', '無妄', '大畜', '頤', '大過', '坎', '離', '咸', '恆', '遁', '大壯', '晉', '明夷', '家人', '睽', '蹇', '解', '損', '益', '夬', '姤', '萃', '升', '困', '井', '革', '鼎', '震', '艮', '漸', '歸妹', '豐', '旅', '巽', '兌', '渙', '節', '中孚', '小過', '既濟', '未濟'];
+        
+        let q = '', lines = [], step = 0;
+        
+        function start() {
+            q = document.getElementById('question').value.trim();
+            if (!q) return alert('請輸入問題');
+            document.getElementById('startBox').style.display = 'none';
+            document.getElementById('tossBox').style.display = 'block';
+            step = 0; lines = [];
+        }
+        
+        function toss() {
+            let heads = 0;
+            for (let i = 1; i <= 3; i++) {
+                const coin = document.getElementById('c' + i);
+                const isHead = Math.random() > 0.5;
+                heads += isHead ? 1 : 0;
+                coin.className = 'coin ' + (isHead ? 'yang' : 'yin');
+                coin.textContent = isHead ? '字' : '背';
+            }
+            let val = heads === 3 ? 9 : heads === 2 ? 7 : heads === 1 ? 8 : 6;
+            lines.push(val);
+            step++;
+            document.getElementById('step').textContent = step;
+            if (step >= 6) showResult();
+        }
+        
+        function showResult() {
+            document.getElementById('tossBox').style.display = 'none';
+            document.getElementById('resultBox').style.display = 'block';
+            document.getElementById('qText').textContent = '問：' + q;
+            
+            let ben = 0, bi = 0;
+            for (let i = 0; i < 6; i++) {
+                const l = lines[i];
+                ben |= ((l===7||l===9)?1:0) << i;
+                bi |= (l===6?1:(l===9?0:((l===7||l===9)?1:0))) << i;
+            }
+            
+            let html = '';
+            for (let i = 5; i >= 0; i--) {
+                const l = lines[i];
+                const y = l === 7 || l === 9;
+                const o = l === 6 || l === 9;
+                html += `<div class="line ${y?'':'broken'} ${o?'old':''}"></div>`;
+            }
+            document.getElementById('gua').innerHTML = html;
+            
+            const benName = names[ben] || '未命名';
+            const biName = names[bi] || '未命名';
+            const hasChange = lines.some(l => l === 6 || l === 9);
+            
+            let text = `<h3>本卦：${benName}</h3><p>${getAnalysis(q)}</p>`;
+            for (let i = 0; i < 6; i++) {
+                if (lines[i] === 6 || lines[i] === 9) {
+                    const pos = ['初', '二', '三', '四', '五', '上'][i];
+                    text += `<p>${pos}爻${lines[i]===6?'老陰→變陽':'老陽→變陰'}</p>`;
+                }
+            }
+            if (hasChange) {
+                text += `<h3>變卦：${biName}</h3><p>局勢有變，需因時制宜</p>`;
+            }
+            document.getElementById('resultText').innerHTML = text;
+        }
+        
+        function getAnalysis(que) {
+            if (que.includes('事業') || que.includes('工作')) return '事業發展開展順利，宜積極進取，有貴人相助';
+            if (que.includes('感情') || que.includes('愛情')) return '感情運勢穩定，已有對象宜珍惜，單身可待機會';
+            if (que.includes('財') || que.includes('錢')) return '財運普通，宜保守理財，不宜冒進投資';
+            return '運勢平穩，保持正道，好運將至';
+        }
+        
+        function reset() {
+            document.getElementById('resultBox').style.display = 'none';
+            document.getElementById('startBox').style.display = 'block';
+            document.getElementById('question').value = '';
+            lines = []; step = 0;
+        }
+    </script>
+</body>
+</html>
