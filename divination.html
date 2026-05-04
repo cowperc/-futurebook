@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔮 金錢卦占卜</title>
+    <title data-lang="zh-TW">🔮 金錢卦占卜</title>
+    <title data-lang="zh-CN">🔮 金钱卦占卜</title>
+    <title data-lang="en">🔮 Divination</title>
+    <title data-lang="ja">🔮 占卜</title>
+    <title data-lang="ko">🔮 점복</title>
+    <title data-lang="es">🔮 Adivinación</title>
+    <title data-lang="fr">🔮 Divination</title>
+    <title data-lang="de">🔮 Wahrsagung</title>
+    <title data-lang="pt">🔮 Adivinhação</title>
+    <title data-lang="ru">🔮 Гадание</title>
+    <title data-lang="ar">🔮 تنجيم</title>
+    <title data-lang="hi">🔮 भविष्यबद्धि</title>
+    <title data-lang="th">🔮 การทำนาย</title>
+    <title data-lang="vi">🔮 Bói toán</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -100,32 +113,154 @@
                 link.setAttribute('href', href + '?lang=' + lang);
             }
         });
+        document.querySelectorAll('[data-lang]').forEach(el => {
+            if (el.getAttribute('data-lang') !== lang) {
+                el.style.display = 'none';
+            }
+        });
     </script>
-    <a href="index.html">← 返回首頁</a>
-    <h1>🔮 金錢卦占卜</h1>
+    <a href="index.html" data-lang="zh-TW">← 返回首頁</a>
+    <a href="index.html" data-lang="zh-CN">← 返回首页</a>
+    <a href="index.html" data-lang="en">← Back to Home</a>
+    <a href="index.html" data-lang="ja">← ホームに戻る</a>
+    <a href="index.html" data-lang="ko">← 홈으로 돌아가기</a>
+    <a href="index.html" data-lang="es">← Volver al Inicio</a>
+    <a href="index.html" data-lang="fr">← Retour à l'Accueil</a>
+    <a href="index.html" data-lang="de">← Zurück zur Startseite</a>
+    <a href="index.html" data-lang="pt">← Voltar ao Início</a>
+    <a href="index.html" data-lang="ru">← На главную</a>
+    <a href="index.html" data-lang="ar">← العودة للرئيسية</a>
+    <a href="index.html" data-lang="hi">← होम पर वापस</a>
+    <a href="index.html" data-lang="th">← กลับหน้าหลัก</a>
+    <a href="index.html" data-lang="vi">← Quay về Trang chủ</a>
+    <h1 data-lang="zh-TW">🔮 金錢卦占卜</h1>
+    <h1 data-lang="zh-CN">🔮 金钱卦占卜</h1>
+    <h1 data-lang="en">🔮 Divination</h1>
+    <h1 data-lang="ja">🔮 占卜</h1>
+    <h1 data-lang="ko">🔮 점복</h1>
+    <h1 data-lang="es">🔮 Adivinación</h1>
+    <h1 data-lang="fr">🔮 Divination</h1>
+    <h1 data-lang="de">🔮 Wahrsagung</h1>
+    <h1 data-lang="pt">🔮 Adivinhação</h1>
+    <h1 data-lang="ru">🔮 Гадание</h1>
+    <h1 data-lang="ar">🔮 تنجيم</h1>
+    <h1 data-lang="hi">🔮 भविष्यबद्धि</h1>
+    <h1 data-lang="th">🔮 การทำนาย</h1>
+    <h1 data-lang="vi">🔮 Bói toán</h1>
     
     <div class="box" id="startBox">
-        <p>請在心裡默念想占問的事</p>
-        <input type="text" id="question" placeholder="例如：我的事業運勢如何？">
-        <button onclick="start()">開始擲杯</button>
+        <p data-lang="zh-TW">請在心裡默念想占問的事</p>
+        <p data-lang="zh-CN">请在心里默念想占问的事</p>
+        <p data-lang="en">Please mentally focus on what you want to ask</p>
+        <p data-lang="ja">占いたいことを心の中で默々と唱えてください</p>
+        <p data-lang="ko">묵상하고 싶은 것을 마음속으로に集中하세요</p>
+        <p data-lang="es">Por favor, piense en lo que desea preguntar</p>
+        <p data-lang="fr">Veuillez vous concentrer mentalement sur votre question</p>
+        <p data-lang="de">Bitte konzentrieren Sie sich mental auf Ihre Frage</p>
+        <p data-lang="pt">Por favor, concentre-se no que deseja perguntar</p>
+        <p data-lang="ru">Пожалуйста, сосредоточьтесь на своем вопросе</p>
+        <p data-lang="ar">يرجى التركيز على ما تريد السؤال عنه</p>
+        <p data-lang="hi">कृपया मानसिक रूप से जानने के लिए ध्यान केंद्रित करें</p>
+        <p data-lang="th">กรุณาคิดในใจเกี่ยวกับสิ่งที่ต้องการถาม</p>
+        <p data-lang="vi">Xin hãy tập trung vào điều bạn muốn hỏi</p>
+        <input type="text" id="question" placeholder data-lang="zh-TW" placeholder="例如：我的事業運勢如何？">
+        <input type="text" id="question" placeholder data-lang="zh-CN" placeholder="例如：我的事业运势如何？">
+        <input type="text" id="question" placeholder data-lang="en" placeholder="e.g., How is my career?">
+        <input type="text" id="question" placeholder data-lang="ja" placeholder="例：私の事業は？">
+        <input type="text" id="question" placeholder data-lang="ko" placeholder="예: 내 사업 운은?">
+        <input type="text" id="question" placeholder data-lang="es" placeholder="ej. ¿Cómo está mi carrera?">
+        <input type="text" id="question" placeholder data-lang="fr" placeholder="ex. Comment est ma carrière?">
+        <input type="text" id="question" placeholder data-lang="de" placeholder="z.B. Wie ist meine Karriere?">
+        <input type="text" id="question" placeholder data-lang="pt" placeholder="ex. Como está minha carreira?">
+        <input type="text" id="question" placeholder data-lang="ru" placeholder="напр. Как дела с карьерой?">
+        <input type="text" id="question" placeholder data-lang="ar" placeholder="مثال: كيف مسيرتي المهنية؟">
+        <input type="text" id="question" placeholder data-lang="hi" placeholder="उदाहरण: मेरा करियर कैसा है?">
+        <input type="text" id="question" placeholder data-lang="th" placeholder="ตัวอย่าง: การงานของฉันเป็นอย่างไร?">
+        <input type="text" id="question" placeholder data-lang="vi" placeholder="ví dụ: Công việc của tôi thế nào?">
+        <button onclick="start()" data-lang="zh-TW">開始擲杯</button>
+        <button onclick="start()" data-lang="zh-CN">开始掷杯</button>
+        <button onclick="start()" data-lang="en">Start Divination</button>
+        <button onclick="start()" data-lang="ja">占いを始める</button>
+        <button onclick="start()" data-lang="ko">점복 시작</button>
+        <button onclick="start()" data-lang="es">Comenzar</button>
+        <button onclick="start()" data-lang="fr">Commencer</button>
+        <button onclick="start()" data-lang="de">Starten</button>
+        <button onclick="start()" data-lang="pt">Começar</button>
+        <button onclick="start()" data-lang="ru">Начать</button>
+        <button onclick="start()" data-lang="ar">ابدأ</button>
+        <button onclick="start()" data-lang="hi">शुरू करें</button>
+        <button onclick="start()" data-lang="th">เริ่ม</button>
+        <button onclick="start()" data-lang="vi">Bắt đầu</button>
     </div>
     
     <div class="box" id="tossBox" style="display:none;">
-        <h3>第 <span id="step">1</span> / 6 爻</h3>
+        <h3 data-lang="zh-TW">第 <span id="step">1</span> / 6 爻</h3>
+        <h3 data-lang="zh-CN">第 <span id="step">1</span> / 6 爻</h3>
+        <h3 data-lang="en">Hexagram Line <span id="step">1</span> / 6</h3>
+        <h3 data-lang="ja">卦 <span id="step">1</span> / 6</h3>
+        <h3 data-lang="ko">효 <span id="step">1</span> / 6</h3>
+        <h3 data-lang="es">Línea <span id="step">1</span> / 6</h3>
+        <h3 data-lang="fr">Ligne <span id="step">1</span> / 6</h3>
+        <h3 data-lang="de">Linie <span id="step">1</span> / 6</h3>
+        <h3 data-lang="pt">Linha <span id="step">1</span> / 6</h3>
+        <h3 data-lang="ru">Линия <span id="step">1</span> / 6</h3>
+        <h3 data-lang="ar">الخط <span id="step">1</span> / 6</h3>
+        <h3 data-lang="hi">पंक्ति <span id="step">1</span> / 6</h3>
+        <h3 data-lang="th">เส้น <span id="step">1</span> / 6</h3>
+        <h3 data-lang="vi">Quẻ <span id="step">1</span> / 6</h3>
         <div class="coins">
             <div class="coin" id="c1"></div>
             <div class="coin" id="c2"></div>
             <div class="coin" id="c3"></div>
         </div>
-        <button onclick="toss()">擲幣</button>
+        <button onclick="toss()" data-lang="zh-TW">擲幣</button>
+        <button onclick="toss()" data-lang="zh-CN">掷币</button>
+        <button onclick="toss()" data-lang="en">Throw Coins</button>
+        <button onclick="toss()" data-lang="ja">硬貨を投げる</button>
+        <button onclick="toss()" data-lang="ko">동전 던지기</button>
+        <button onclick="toss()" data-lang="es">Tirar Monedas</button>
+        <button onclick="toss()" data-lang="fr">Lancer les Pièces</button>
+        <button onclick="toss()" data-lang="de">Münzen Werfen</button>
+        <button onclick="toss()" data-lang="pt">Jogar Moedas</button>
+        <button onclick="toss()" data-lang="ru">Бросить Монеты</button>
+        <button onclick="toss()" data-lang="ar">رمي العملات</button>
+        <button onclick="toss()" data-lang="hi">सिक्के फेंकें</button>
+        <button onclick="toss()" data-lang="th">โยนเหรียญ</button>
+        <button onclick="toss()" data-lang="vi">Gieo đồng xu</button>
     </div>
     
     <div class="box" id="resultBox" style="display:none;">
-        <h2>🏆 結果</h2>
+        <h2 data-lang="zh-TW">🏆 結果</h2>
+        <h2 data-lang="zh-CN">🏆 结果</h2>
+        <h2 data-lang="en">🏆 Result</h2>
+        <h2 data-lang="ja">🏆 結果</h2>
+        <h2 data-lang="ko">🏆 결과</h2>
+        <h2 data-lang="es">🏆 Resultado</h2>
+        <h2 data-lang="fr">🏆 Résultat</h2>
+        <h2 data-lang="de">🏆 Ergebnis</h2>
+        <h2 data-lang="pt">🏆 Resultado</h2>
+        <h2 data-lang="ru">🏆 Результат</h2>
+        <h2 data-lang="ar">🏆 النتيجة</h2>
+        <h2 data-lang="hi">🏆 परिणाम</h2>
+        <h2 data-lang="th">🏆 ผลลัพธ์</h2>
+        <h2 data-lang="vi">🏆 Kết quả</h2>
         <h3 id="qText" style="color:#aaa;"></h3>
         <div class="lines" id="gua"></div>
         <div class="result" id="resultText"></div>
-        <button onclick="reset()">再占一次</button>
+        <button onclick="reset()" data-lang="zh-TW">再占一次</button>
+        <button onclick="reset()" data-lang="zh-CN">再占一次</button>
+        <button onclick="reset()" data-lang="en">Divine Again</button>
+        <button onclick="reset()" data-lang="ja">もう一度占う</button>
+        <button onclick="reset()" data-lang="ko">다시 점복</button>
+        <button onclick="reset()" data-lang="es">Divinar de Nuevo</button>
+        <button onclick="reset()" data-lang="fr">Diviner à Nouveau</button>
+        <button onclick="reset()" data-lang="de">Erneut Wahrsagen</button>
+        <button onclick="reset()" data-lang="pt">Divinar Novamente</button>
+        <button onclick="reset()" data-lang="ru">Гадать Снова</button>
+        <button onclick="reset()" data-lang="ar">تنجيم مرة أخرى</button>
+        <button onclick="reset()" data-lang="hi">फिर से भविष्यबद्धि</button>
+        <button onclick="reset()" data-lang="th">ทำนายอีกครั้ง</button>
+        <button onclick="reset()" data-lang="vi">Bói lại</button>
     </div>
 
     <script>

@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🥬 純素救地球 - 未來之書</title>
+    <title data-lang="zh-TW">🥬 純素救地球 - 未來之書</title>
+    <title data-lang="zh-CN">🥬 纯素救地球 - 未来之书</title>
+    <title data-lang="en">🥬 Vegan Save the Earth - Future Book</title>
+    <title data-lang="ja">🥬 ベジタリアン地球を救え - フューチャーブック</title>
+    <title data-lang="ko">🥬 비건 지구 구하기 - 미래의 책</title>
+    <title data-lang="es">🥬 Vegetal Salva la Tierra - Libro del Futuro</title>
+    <title data-lang="fr">🥬 Végan Sauve la Terre - Livre du Futur</title>
+    <title data-lang="de">🥬 Vegan Rette die Erde - Zukunftsbuch</title>
+    <title data-lang="pt">🥬 Vegano Salve a Terra - Livro do Futuro</title>
+    <title data-lang="ru">🥬 Веган Спаси Землю - Книга Будущего</title>
+    <title data-lang="ar">🥬 نباتي أنقذ الأرض - كتاب المستقبل</title>
+    <title data-lang="hi">🥬 वीगन पृथ्वी बचाओ - फ्यूचर बुक</title>
+    <title data-lang="th">🥬 วีแกนช่วยโลก - หนังสืออนาคต</title>
+    <title data-lang="vi">🥬 Chay cứu Trái Đất - Sách Tương lai</title>
     <meta name="keywords" content="纯素,环保,游戏,地球">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -147,9 +160,40 @@
                 link.setAttribute('href', href + '?lang=' + lang);
             }
         });
+        document.querySelectorAll('[data-lang]').forEach(el => {
+            if (el.getAttribute('data-lang') !== lang) {
+                el.style.display = 'none';
+            }
+        });
     </script>
-    <a href="index.html" class="back-link">← 返回首頁</a>
-    <h1>🌍 純素救地球</h1>
+    <a href="index.html" class="back-link" data-lang="zh-TW">← 返回首頁</a>
+    <a href="index.html" class="back-link" data-lang="zh-CN">← 返回首页</a>
+    <a href="index.html" class="back-link" data-lang="en">← Back to Home</a>
+    <a href="index.html" class="back-link" data-lang="ja">← ホームに戻る</a>
+    <a href="index.html" class="back-link" data-lang="ko">← 홈으로 돌아가기</a>
+    <a href="index.html" class="back-link" data-lang="es">← Volver al Inicio</a>
+    <a href="index.html" class="back-link" data-lang="fr">← Retour à l'Accueil</a>
+    <a href="index.html" class="back-link" data-lang="de">← Zurück zur Startseite</a>
+    <a href="index.html" class="back-link" data-lang="pt">← Voltar ao Início</a>
+    <a href="index.html" class="back-link" data-lang="ru">← На главную</a>
+    <a href="index.html" class="back-link" data-lang="ar">← العودة للرئيسية</a>
+    <a href="index.html" class="back-link" data-lang="hi">← होम पर वापस</a>
+    <a href="index.html" class="back-link" data-lang="th">← กลับหน้าหลัก</a>
+    <a href="index.html" class="back-link" data-lang="vi">← Quay về Trang chủ</a>
+    <h1 data-lang="zh-TW">🌍 純素救地球</h1>
+    <h1 data-lang="zh-CN">🌍 纯素救地球</h1>
+    <h1 data-lang="en">🌍 Vegan Save the Earth</h1>
+    <h1 data-lang="ja">🌍 ベジタリアン地球を救え</h1>
+    <h1 data-lang="ko">🌍 비건 지구 구하기</h1>
+    <h1 data-lang="es">🌍 Vegetal Salva la Tierra</h1>
+    <h1 data-lang="fr">🌍 Végan Sauve la Terre</h1>
+    <h1 data-lang="de">🌍 Vegan Rette die Erde</h1>
+    <h1 data-lang="pt">🌍 Vegano Salve a Terra</h1>
+    <h1 data-lang="ru">🌍 Веган Спаси Землю</h1>
+    <h1 data-lang="ar">🌍 نباتي أنقذ الأرض</h1>
+    <h1 data-lang="hi">🌍 वीगन पृथ्वी बचाओ</h1>
+    <h1 data-lang="th">🌍 วีแกนช่วยโลก</h1>
+    <h1 data-lang="vi">🌍 Chay cứu Trái Đất</h1>
     <div style="display:flex; gap:20px; margin-bottom:20px;">
         <a href="https://zlmxkv3ba3mx.space.minimax.io/" target="_blank" style="background:var(--primary); color:var(--dark); padding:10px 20px; border-radius:20px; text-decoration:none; font-weight:bold;">🚀 標準版</a>
         <a href="https://16mnoh9g7cyo.space.minimax.io/" target="_blank" style="background:#ffd700; color:var(--dark); padding:10px 20px; border-radius:20px; text-decoration:none; font-weight:bold;">🐢 慢速版</a>

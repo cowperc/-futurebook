@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>外星人接觸 - 未來之書</title>
+    <title data-lang="zh-TW">外星人接觸 - 未來之書</title>
+    <title data-lang="zh-CN">外星人接触 - 未来之书</title>
+    <title data-lang="en">Alien Contacts - Future Book</title>
+    <title data-lang="ja">宇宙人接触 - フューチャーブック</title>
+    <title data-lang="ko">외계인 접촉 - 미래의 책</title>
+    <title data-lang="es">Contactos Alienígenas - Libro del Futuro</title>
+    <title data-lang="fr">Contacts Extraterrestres - Livre du Futur</title>
+    <title data-lang="de">Außerirdische Kontakte - Zukunftsbuch</title>
+    <title data-lang="pt">Contatos Alienígenas - Livro do Futuro</title>
+    <title data-lang="ru">Контакты с Инопланетянами - Книга Будущего</title>
+    <title data-lang="ar">الاتصال بالكائنات الفضائية - كتاب المستقبل</title>
+    <title data-lang="hi">एलियन संपर्क - फ्यूचर बुक</title>
+    <title data-lang="th">การติดต่อเอเลี่ยน - หนังสืออนาคต</title>
+    <title data-lang="vi">Tiếp xúc người ngoài hành tinh - Sách Tương lai</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -45,31 +58,125 @@
                 link.setAttribute('href', href + '?lang=' + lang);
             }
         });
+        document.querySelectorAll('[data-lang]').forEach(el => {
+            if (el.getAttribute('data-lang') !== lang) {
+                el.style.display = 'none';
+            }
+        });
     </script>
     <div class="container">
-        <a href="index.html" class="back-link">← 返回首頁</a>
+        <a href="index.html" class="back-link" data-lang="zh-TW">← 返回首頁</a>
+        <a href="index.html" class="back-link" data-lang="zh-CN">← 返回首页</a>
+        <a href="index.html" class="back-link" data-lang="en">← Back to Home</a>
+        <a href="index.html" class="back-link" data-lang="ja">← ホームに戻る</a>
+        <a href="index.html" class="back-link" data-lang="ko">← 홈으로 돌아가기</a>
+        <a href="index.html" class="back-link" data-lang="es">← Volver al Inicio</a>
+        <a href="index.html" class="back-link" data-lang="fr">← Retour à l'Accueil</a>
+        <a href="index.html" class="back-link" data-lang="de">← Zurück zur Startseite</a>
+        <a href="index.html" class="back-link" data-lang="pt">← Voltar ao Início</a>
+        <a href="index.html" class="back-link" data-lang="ru">← На главную</a>
+        <a href="index.html" class="back-link" data-lang="ar">← العودة للرئيسية</a>
+        <a href="index.html" class="back-link" data-lang="hi">← होम पर वापस</a>
+        <a href="index.html" class="back-link" data-lang="th">← กลับหน้าหลัก</a>
+        <a href="index.html" class="back-link" data-lang="vi">← Quay về Trang chủ</a>
         
-        <h1>🛸 外星人接觸案例</h1>
-        <p class="subtitle">來自地球各地的 UFO 接觸經驗</p>
+        <h1 data-lang="zh-TW">🛸 外星人接觸案例</h1>
+        <h1 data-lang="zh-CN">🛸 外星人接触案例</h1>
+        <h1 data-lang="en">🛸 Alien Contact Cases</h1>
+        <h1 data-lang="ja">🛸 宇宙人接触ケース</h1>
+        <h1 data-lang="ko">🛸 외계인 접촉 사례</h1>
+        <h1 data-lang="es">🛸 Casos de Contacto Alienígena</h1>
+        <h1 data-lang="fr">🛸 Cas de Contact Extraterrestre</h1>
+        <h1 data-lang="de">🛸 Außerirdische Kontaktfälle</h1>
+        <h1 data-lang="pt">🛸 Casos de Contato Alienígena</h1>
+        <h1 data-lang="ru">🛸 Контакты с Инопланетянами</h1>
+        <h1 data-lang="ar">🛸 حالات الاتصال بالكائنات الفضائية</h1>
+        <h1 data-lang="hi">🛸 एलियन संपर्क मामले</h1>
+        <h1 data-lang="th">🛸 กรณีติดต่อเอเลี่ยน</h1>
+        <h1 data-lang="vi">🛸 Các vụ tiếp xúc người ngoài hành tinh</h1>
+        
+        <p class="subtitle" data-lang="zh-TW">來自地球各地的 UFO 接觸經驗</p>
+        <p class="subtitle" data-lang="zh-CN">来自地球各地的 UFO 接触经验</p>
+        <p class="subtitle" data-lang="en">UFO contact experiences from around the world</p>
+        <p class="subtitle" data-lang="ja">世界中のUFO接触経験</p>
+        <p class="subtitle" data-lang="ko">전 세계 UFO 접촉 경험</p>
+        <p class="subtitle" data-lang="es">Experiencias de contacto OVNI de todo el mundo</p>
+        <p class="subtitle" data-lang="fr">Expériences de contact OVNI du monde entier</p>
+        <p class="subtitle" data-lang="de">UFO-Kontakterfahrungen aus aller Welt</p>
+        <p class="subtitle" data-lang="pt">Experiências de contato OVNI de todo o mundo</p>
+        <p class="subtitle" data-lang="ru">Контакты с НЛО со всего мира</p>
+        <p class="subtitle" data-lang="ar">تجارب اتصال UFO من حول العالم</p>
+        <p class="subtitle" data-lang="hi">दुनिया भर से UFO संपर्क अनुभव</p>
+        <p class="subtitle" data-lang="th">ประสบการณ์ติดต่อ UFO จากทั่วโลก</p>
+        <p class="subtitle" data-lang="vi">Kinh nghiệm tiếp xúc UFO từ khắp thế giới</p>
         
         <div class="content">
             <div class="highlight">
-                <strong>資料來源：</strong>geocities.ws/futureufo/et.htm<br>
-                這些資料僅供參考，請勿過度迷信。
+                <strong data-lang="zh-TW">資料來源：</strong><strong data-lang="zh-CN">资料来源：</strong><strong data-lang="en">Source:</strong><strong data-lang="ja">ソース：</strong><strong data-lang="ko">출처：</strong><strong data-lang="es">Fuente:</strong><strong data-lang="fr">Source:</strong><strong data-lang="de">Quelle:</strong>
+                <span data-lang="zh-TW">geocities.ws/futureufo/et.htm<br>這些資料僅供參考，請勿過度迷信。</span>
+                <span data-lang="zh-CN">geocities.ws/futureufo/et.htm<br>这些资料仅供参考，请勿过度迷信。</span>
+                <span data-lang="en">geocities.ws/futureufo/et.htm<br>These are for reference only, please do not be overly superstitious.</span>
+                <span data-lang="ja">geocities.ws/futureufo/et.htm<br>これらは参考までに、過度に迷信的にならないでください。</span>
+                <span data-lang="ko">geocities.ws/futureufo/et.htm<br>이들은 참조용일 뿐過信하지 마세요.</span>
+                <span data-lang="es">geocities.ws/futureufo/et.htm<br>Esto es solo como referencia, por favor no sea supersticioso.</span>
+                <span data-lang="fr">geocities.ws/futureufo/et.htm<br>C'est seulement pour référence, s'il vous plaît ne pas être superstitieux.</span>
+                <span data-lang="de">geocities.ws/futureufo/et.htm<br>Dies ist nur zur Referenz, bitte nicht zu abergläubisch sein.</span>
             </div>
             
-            <h2>🌟 Billy Meier 案例</h2>
-            <p>瑞士農夫 Billy Meier 是最著名的 UFO 接觸者之一。自 1973 年開始，他與來自昴宿星團（Pleiades）的外星人進行了數百次接觸。</p>
+            <h2 data-lang="zh-TW">🌟 Billy Meier 案例</h2>
+            <h2 data-lang="zh-CN">🌟 Billy Meier 案例</h2>
+            <h2 data-lang="en">🌟 Billy Meier Case</h2>
+            <h2 data-lang="ja">🌟 Billy Meier ケース</h2>
+            <h2 data-lang="ko">🌟 Billy Meier 사례</h2>
+            <h2 data-lang="es">🌟 Caso Billy Meier</h2>
+            <h2 data-lang="fr">🌟 Cas Billy Meier</h2>
+            <h2 data-lang="de">🌟 Billy Meier Fall</h2>
+            
+            <p data-lang="zh-TW">瑞士農夫 Billy Meier 是最著名的 UFO 接觸者之一。自 1973 年開始，他與來自昴宿星團（Pleiades）的外星人進行了數百次接觸。</p>
+            <p data-lang="zh-CN">瑞士农夫 Billy Meier 是最著名的 UFO 接触者之一。自 1973 年开始，他与来自昴宿星团（Pleiades）的外星人进行了数百次接触。</p>
+            <p data-lang="en">Swiss farmer Billy Meier is one of the most famous UFO contactees. Since 1973, he has had hundreds of contacts with aliens from the Pleiades star cluster.</p>
+            <p data-lang="ja">スイスの農夫ビリー・マイヤーは最も有名なUFO接觸者の一人です。1973年以来、プレアデス星団からの宇宙人と数百回の接触を行いました。</p>
+            <p data-lang="ko">스위스 농부 비리 마이어는 가장 유명한 UFO 접촉자 중 하나입니다. 1973년 이후 플레이아데스 성단에서 온 외계인과 수백 번의 접촉을 했습니다.</p>
+            <p data-lang="es">El granjero suizo Billy Meier es uno de los contactados de OVNI más famosos. Desde 1973, ha tenido cientos de contactos con aliens de las Pléyades.</p>
+            <p data-lang="fr">L'agriculteur suisse Billy Meier est l'un des contactés OVNI les plus célèbres. Depuis 1973, il a eu des centaines de contacts avec des extraterrestres des Pléiades.</p>
+            <p data-lang="de">Der Schweizer Landwirt Billy Meier ist einer der berühmtesten UFO-Kontaktler. Seit 1973 hatte er Hunderte von Kontakten mit Außerirdischen aus dem Plejaden-Sternhaufen.</p>
             
             <div class="info-box">
-                <h3>接觸時間線</h3>
-                <p>• 1963年 - 首次接觸<br>
-                • 1973年 - 正式開始大規模接觸<br>
-                • 1975年 - 拍攝眾多 UFO 照片和影片<br>
-                • 1977-1988年 - 接觸報告巔峰期</p>
+                <h3 data-lang="zh-TW">接觸時間線</h3>
+                <h3 data-lang="zh-CN">接触时间线</h3>
+                <h3 data-lang="en">Contact Timeline</h3>
+                <h3 data-lang="ja">接触タイムライン</h3>
+                <h3 data-lang="ko">접촉 타임라인</h3>
+                <h3 data-lang="es">Línea de Tiempo de Contacto</h3>
+                <h3 data-lang="fr">Chronologie des Contacts</h3>
+                <h3 data-lang="de">Kontakt-Zeitachse</h3>
+                <p data-lang="zh-TW">• 1963年 - 首次接觸<br>• 1973年 - 正式開始大規模接觸<br>• 1975年 - 拍攝眾多 UFO 照片和影片<br>• 1977-1988年 - 接觸報告巔峰期</p>
+                <p data-lang="zh-CN">• 1963年 - 首次接触<br>• 1973年 -正式开始大规模接触<br>• 1975年 - 拍摄众多 UFO 照片和影片<br>• 1977-1988年 - 接触报告巅峰期</p>
+                <p data-lang="en">• 1963 - First contact<br>• 1973 - Formal large-scale contact begins<br>• 1975 - Many UFO photos and videos taken<br>• 1977-1988 - Peak period of contact reports</p>
+                <p data-lang="ja">• 1963年 - 最初の接触<br>• 1973年 - 公式の大規模接触開始<br>• 1975年 - 多くのUFO写真と動画を撮影<br>• 1977-1988年 - 接触報告のピーク期</p>
+                <p data-lang="ko">• 1963년 - 최초 접촉<br>• 1973년 - 공식 대규모 접촉 시작<br>• 1975년 - 많은 UFO 사진과 영상 촬영<br>• 1977-1988년 - 접촉 보고서의 정점기</p>
+                <p data-lang="es">• 1963 - Primer contacto<br>• 1973 - Comienza el contacto a gran escala<br>• 1975 - Se toman muchas fotos y videos de ovnis<br>• 1977-1988 - Período máximo de informes de contacto</p>
+                <p data-lang="fr">• 1963 - Premier contact<br>• 1973 - Début des contacts à grande échelle<br>• 1975 - De nombreuses photos et vidéos d'ovnis prises<br>• 1977-1988 - Période maximale des rapports de contact</p>
+                <p data-lang="de">• 1963 - Erster Kontakt<br>• 1973 - Formeller Großkontakt beginnt<br>• 1975 - Viele UFO-Fotos und -Videos aufgenommen<br>• 1977-1988 - Höhepunkt der Kontaktberichte</p>
             </div>
             
-            <h2>🛸 接觸的外星種族</h2>
+            <h2 data-lang="zh-TW">🛸 接觸的外星種族</h2>
+            <h2 data-lang="zh-CN">🛸 接触的外星种族</h2>
+            <h2 data-lang="en">🛸 Alien Species Contacted</h2>
+            <h2 data-lang="ja">🛸 接触した宇宙人種</h2>
+            <h2 data-lang="ko">🛸 접촉한 외계 종족</h2>
+            <h2 data-lang="es">🛸 Especies Alienígenas Contactadas</h2>
+            <h2 data-lang="fr">🛸 Espèces Extraterrestres Contactées</h2>
+            <h2 data-lang="de">🛸 Kontaktierte Außerirdische Arten</h2>
+            
+            <p data-lang="zh-TW"><strong>昴宿星人（Pleiadians）</strong> - 來自金牛座的昴宿星團，被描述為與人類外型相似的高度進化文明的存有。他們強調靈性成長與和平。</p>
+            <p data-lang="zh-CN"><strong>昴宿星人（Pleiadians）</strong> - 来自金牛座的昴宿星团，被描述为与人类外型相似的高度进化文明的存在。他们强调灵性成长与和平。</p>
+            <p data-lang="en"><strong>Pleiadians</strong> - From the Pleiades star cluster in Taurus, described as highly evolved beings similar in appearance to humans. They emphasize spiritual growth and peace.</p>
+            <p data-lang="ja"><strong>プレイアディアン</strong> - おひつじ座のプレアデス星団から、人間と似た外見を持つ高度に進化した存在として描述されます。霊性の成長と和平を重視します。</p>
+            <p data-lang="ko"><strong>플레이아디안</strong> - 황소자리의 플레이아데스 성단에서 인간과 비슷한 외모를 가진 고도로 진화된 존재로 설명됩니다. 영성 성장과 평화를 강조합니다.</p>
+            <p data-lang="es"><strong>Pleiadianos</strong> - Del cúmulo de estrellas Pléyades en Tauro, descritos como seres altamente evolucionados de apariencia similar a los humanos. Enfatizan el crecimiento espiritual y la paz.</p>
+            <p data-lang="fr"><strong>Pléiades</strong> - De l'amas des Pléiades dans le Taureau, décrits comme des êtres hautement evolués d'apparence similaire aux humains. Ils soulignent la croissance spirituelle et la paix.</p>
+            <p data-lang="de"><strong>Pleiadianer</strong> - Aus dem Plejaden-Sternhaufen im Stier, beschrieben als hochentwickelte Wesen ähnlich dem Menschen. Sie betonen spirituelles Wachstum und Frieden.</p>
             <p><strong>昴宿星人（Pleiadians）</strong> - 來自金牛座的昴宿星團，被描述為與人類外型相似的高度進化文明的存有。他們強調靈性成長與和平。</p>
             <p><strong>網罟座人（Reticulum）</strong> - 來自網罟座星系的灰色外星人。他們會使用仿生人（人造人）。</p>
             <p><strong>火星人（Martian）</strong> - 少數案例中提到的火星智慧生命。</p>
@@ -105,21 +212,32 @@
             • 美國 Kansas 州 George Van Tassel's 天使訊息<br>
             • 更多未公開的案例...</p>
             
-            <h2>⚠️ 重要提醒</h2>
-            <div class="highlight">
-                這些 UFO 接觸案例的資訊來自多個來源，包括：<br>
-                • geocities.ws/futureufo<br>
-                • Billy Meier 接觸報告<br>
-                • 克里昂訊息<br>
-                • 各國 UFO 組織<br><br>
-                <strong>預言聽聽，姑妄聽之，請保持理性判斷。</strong>
-            </div>
+            <h2 data-lang="zh-TW">⚠️ 重要提醒</h2>
+            <h2 data-lang="zh-CN">⚠️ 重要提醒</h2>
+            <h2 data-lang="en">⚠️ Important Notice</h2>
+            <h2 data-lang="ja">⚠️ 重要な注意</h2>
+            <h2 data-lang="ko">⚠️ 중요 알림</h2>
+            <h2 data-lang="es">⚠️ Aviso Importante</h2>
+            <h2 data-lang="fr">⚠️ Important</h2>
+            <h2 data-lang="de">⚠️ Wichtiger Hinweis</h2>
+            <div class="highlight" data-lang="zh-TW">這些 UFO 接觸案例的資訊來自多個來源，包括：<br>• geocities.ws/futureufo<br>• Billy Meier 接觸報告<br>• 克里昂訊息<br>• 各國 UFO 組織<br><br><strong>預言聽聽，姑妄聽之，請保持理性判斷。</strong></div>
+            <div class="highlight" data-lang="zh-CN">这些 UFO 接触案例的资讯来自多个来源，包括：<br>• geocities.ws/futureufo<br>• Billy Meier 接触报告<br>• 克里昂讯息<br>• 各国 UFO 组织<br><br><strong>预言听听，姑妄听之，请保持理性判断。</strong></div>
+            <div class="highlight" data-lang="en">These UFO contact case information comes from multiple sources including:<br>• geocities.ws/futureufo<br>• Billy Meier contact reports<br>• Kryon messages<br>• UFO organizations from various countries<br><br><strong>Take prophecies with a grain of salt, please maintain rational judgment.</strong></div>
+            <div class="highlight" data-lang="ja">これらのUFO接触ケース情報は以下の複数のソースからのものです：<br>• geocities.ws/futureufo<br>• ビリー・マイヤー接触レポート<br>• 克里オン・メッセージ<br>• 各国のUFO組織<br><br><strong>予言は眉に唾を付けて聞いてください。</strong></div>
+            <div class="highlight" data-lang="ko">이 UFO 접촉 사례 정보는 다음을 포함한 여러 출처에서 왔습니다:<br>• geocities.ws/futureufo<br>• 비리 마이어 접촉 보고서<br>• 크라이온 메시지<br>• 각국 UFO 조직<br><br><strong>예언은 비판적으로 판단하세요.</strong></div>
+            <div class="highlight" data-lang="es">Esta información de casos de contacto OVNI viene de múltiples fuentes:<br>• geocities.ws/futureufo<br>• Informes de contacto de Billy Meier<br>• Mensajes de Kryon<br>• Organizaciones OVNI de varios países<br><br><strong>Tome las profecías con cautela, mantenga un juicio racional.</strong></div>
+            <div class="highlight" data-lang="fr">Ces informations sur les cas de contact OVNI proviennent de multiples sources:<br>• geocities.ws/futureufo<br>• Rapports de contact de Billy Meier<br>• Messages de Kryon<br>• Organisations OVNI de différents pays<br><br><strong>Prenez les prophéties avec un grain de sel, maintenez un jugement rationnel.</strong></div>
+            <div class="highlight" data-lang="de">Diese UFO-Kontaktfall-Informationen stammen aus mehreren Quellen:<br>• geocities.ws/futureufo<br>• Billy Meier Kontaktberichte<br>• Kryon-Botschaften<br>• UFO-Organisationen verschiedener Länder<br><br><strong>Prophezeiungen kritisch betrachten, bitte bewahren Sie ein rationales Urteil.</strong></div>
         </div>
         
-        <p class="note">
-            資料來源：geocities.ws/futureufo/et.htm<br>
-            版權歸原作者所有，侵權刪除。
-        </p>
+        <p class="note" data-lang="zh-TW">資料來源：geocities.ws/futureufo/et.htm<br>版權歸原作者所有，侵權刪除。</p>
+        <p class="note" data-lang="zh-CN">资料来源：geocities.ws/futureufo/et.htm<br>版权归原作者所有，侵权删除。</p>
+        <p class="note" data-lang="en">Source: geocities.ws/futureufo/et.htm<br>Copyright belongs to original authors.</p>
+        <p class="note" data-lang="ja">ソース：geocities.ws/futureufo/et.htm<br>著作権は原著作者にあります。</p>
+        <p class="note" data-lang="ko">출처: geocities.ws/futureufo/et.htm<br>저작권은 원저자에게 있습니다.</p>
+        <p class="note" data-lang="es">Fuente: geocities.ws/futureufo/et.htm<br>El copyright pertenece a los autores originales.</p>
+        <p class="note" data-lang="fr">Source: geocities.ws/futureufo/et.htm<br>Le droit d'auteur appartient aux auteurs originaux.</p>
+        <p class="note" data-lang="de">Quelle: geocities.ws/futureufo/et.htm<br>Das Urheberrecht liegt bei den ursprünglichen Autoren.</p>
     </div>
 </body>
 </html>

@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>靈性書籍推薦 - 未來之書</title>
+    <title data-lang="zh-TW">靈性書籍推薦 - 未來之書</title>
+    <title data-lang="zh-CN">灵性书籍推荐 - 未来之书</title>
+    <title data-lang="en">Spiritual Books - Future Book</title>
+    <title data-lang="ja">靈性書籍 - フューチャーブック</title>
+    <title data-lang="ko">영적 도서 - 미래의 책</title>
+    <title data-lang="es">Libros Espirituales - Libro del Futuro</title>
+    <title data-lang="fr">Livres Spirituels - Livre du Futur</title>
+    <title data-lang="de">Spirituelle Bücher - Zukunftsbuch</title>
+    <title data-lang="pt">Livros Espirituais - Livro do Futuro</title>
+    <title data-lang="ru">Духовные Книги - Книга Будущего</title>
+    <title data-lang="ar">كتب روحية - كتاب المستقبل</title>
+    <title data-lang="hi">आध्यात्मिक पुस्तकें - फ्यूचर बुक</title>
+    <title data-lang="th">หนังสือจิตวิญญาณ - หนังสืออนาคต</title>
+    <title data-lang="vi">Sách tâm linh - Sách Tương lai</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -45,56 +58,149 @@
                 link.setAttribute('href', href + '?lang=' + lang);
             }
         });
+        document.querySelectorAll('[data-lang]').forEach(el => {
+            if (el.getAttribute('data-lang') !== lang) {
+                el.style.display = 'none';
+            }
+        });
     </script>
     <div class="container">
-        <a href="index.html" class="back-link">← 返回首頁</a>
+        <a href="index.html" class="back-link" data-lang="zh-TW">← 返回首頁</a>
+        <a href="index.html" class="back-link" data-lang="zh-CN">← 返回首页</a>
+        <a href="index.html" class="back-link" data-lang="en">← Back to Home</a>
+        <a href="index.html" class="back-link" data-lang="ja">← ホームに戻る</a>
+        <a href="index.html" class="back-link" data-lang="ko">← 홈으로 돌아가기</a>
+        <a href="index.html" class="back-link" data-lang="es">← Volver al Inicio</a>
+        <a href="index.html" class="back-link" data-lang="fr">← Retour à l'Accueil</a>
+        <a href="index.html" class="back-link" data-lang="de">← Zurück zur Startseite</a>
+        <a href="index.html" class="back-link" data-lang="pt">← Voltar ao Início</a>
+        <a href="index.html" class="back-link" data-lang="ru">← На главную</a>
+        <a href="index.html" class="back-link" data-lang="ar">← العودة للرئيسية</a>
+        <a href="index.html" class="back-link" data-lang="hi">← होम पर वापस</a>
+        <a href="index.html" class="back-link" data-lang="th">← กลับหน้าหลัก</a>
+        <a href="index.html" class="back-link" data-lang="vi">← Quay về Trang chủ</a>
         
-        <h1>📚 靈性書籍推薦</h1>
-        <p class="subtitle">引導你走向光明的道路</p>
+        <h1 data-lang="zh-TW">📚 靈性書籍推薦</h1>
+        <h1 data-lang="zh-CN">📚 灵性书籍推荐</h1>
+        <h1 data-lang="en">📚 Spiritual Books</h1>
+        <h1 data-lang="ja">📚 靈性書籍</h1>
+        <h1 data-lang="ko">📚 영적 도서</h1>
+        <h1 data-lang="es">📚 Libros Espirituales</h1>
+        <h1 data-lang="fr">📚 Livres Spirituels</h1>
+        <h1 data-lang="de">📚 Spirituelle Bücher</h1>
+        <h1 data-lang="pt">📚 Livros Espirituais</h1>
+        <h1 data-lang="ru">📚 Духовные Книги</h1>
+        <h1 data-lang="ar">📚 كتب روحية</h1>
+        <h1 data-lang="hi">📚 आध्यात्मिक पुस्तकें</h1>
+        <h1 data-lang="th">📚 หนังสือจิตวิญญาณ</h1>
+        <h1 data-lang="vi">📚 Sách tâm linh</h1>
+        
+        <p class="subtitle" data-lang="zh-TW">引導你走向光明的道路</p>
+        <p class="subtitle" data-lang="zh-CN">引导你走向光明的道路</p>
+        <p class="subtitle" data-lang="en">Guiding you towards the light</p>
+        <p class="subtitle" data-lang="ja">光への道をナビゲート</p>
+        <p class="subtitle" data-lang="ko">빛으로가는 길 안내</p>
+        <p class="subtitle" data-lang="es">Guiándote hacia la luz</p>
+        <p class="subtitle" data-lang="fr">Vous guider vers la lumière</p>
+        <p class="subtitle" data-lang="de">Sie zum Licht führen</p>
+        <p class="subtitle" data-lang="pt">Guiando você para a luz</p>
+        <p class="subtitle" data-lang="ru">Ведущий вас к свету</p>
+        <p class="subtitle" data-lang="ar">يقودك نحو النور</p>
+        <p class="subtitle" data-lang="hi">आपको प्रकाश की ओर मार्गदर्शन करना</p>
+        <p class="subtitle" data-lang="th">ชี้ทางสู่แสงสว่าง</p>
+        <p class="subtitle" data-lang="vi">Hướng dẫn bạn đến ánh sáng</p>
         
         <div class="content">
-            <h2>🌟 克里昂系列 (Kryon)</h2>
+            <h2 data-lang="zh-TW">🌟 克里昂系列 (Kryon)</h2>
+            <h2 data-lang="zh-CN">🌟 克里昂系列 (Kryon)</h2>
+            <h2 data-lang="en">🌟 Kryon Series</h2>
+            <h2 data-lang="ja">🌟 克里オンシリーズ</h2>
+            <h2 data-lang="ko">🌟 크라이온 시리즈</h2>
+            <h2 data-lang="es">🌟 Serie Kryon</h2>
+            <h2 data-lang="fr">🌟 Série Kryon</h2>
+            <h2 data-lang="de">🌟 Kryon Serie</h2>
             <div class="book-box">
-                <h3>《克里昂書系列》</h3>
-                <p>作者：李·卡羅 (Lee Carroll)</p>
-                <p>克里昂是來自織女星(Vega)的磁性服務團隊，透過靈媒李·卡羅在世界各地傳遞訊息。訊息涵蓋人類DNA進化、地球揚升、靈性覺醒等主題。</p>
+                <h3 data-lang="zh-TW">《克里昂書系列》</h3>
+                <h3 data-lang="zh-CN">《克里昂书系列》</h3>
+                <h3 data-lang="en">Kryon Book Series</h3>
+                <h3 data-lang="ja">《克里オン書シリーズ》</h3>
+                <h3 data-lang="ko">《크라이온 시리즈》</h3>
+                <h3 data-lang="es">Serie de Libros Kryon</h3>
+                <h3 data-lang="fr">Série de Livres Kryon</h3>
+                <h3 data-lang="de">Kryon Buchserie</h3>
+                <p data-lang="zh-TW">作者：李·卡羅 (Lee Carroll)<br>克里昂是來自織女星(Vega)的磁性服務團隊，透過靈媒李·卡羅在世界各地傳遞訊息。訊息涵蓋人類DNA進化、地球揚升、靈性覺醒等主題。</p>
+                <p data-lang="zh-CN">作者：李·卡罗 (Lee Carroll)<br>克里昂是来自织女星(Vega)的磁性服务团队，透过灵媒李·卡罗在世界各地传递讯息。讯息涵盖人类DNA进化、地球扬升、灵性觉醒等主题。</p>
+                <p data-lang="en">Author: Lee Carroll<br>Kryon is a magnetic service team from Vega, delivering messages through medium Lee Carroll worldwide. Messages cover human DNA evolution, Earth ascension, spiritual awakening and more.</p>
+                <p data-lang="ja">著者：リー・キャロル<br>克里オンはおりひめ座(Vega)からの磁性サービスチームで、霊媒リー・キャロルを通じて世界中にメッセージを伝達します。</p>
+                <p data-lang="ko">저자: 리 캐롤<br>크라이온은 베가(Vega)からの 자기 서비스 팀으로, 점쟁이 리 캐롤을 통해 전 세계에 메시지를 전달합니다.</p>
+                <p data-lang="es">Autor: Lee Carroll<br>Kryon es un equipo de servicio magnético de Vega, transmitiendo mensajes a través del médium Lee Carroll en todo el mundo.</p>
+                <p data-lang="fr">Auteur: Lee Carroll<br>Kryon est une équipe de service magnétique de Véga, transmettant des messages à travers le médium Lee Carroll dans le monde entier.</p>
+                <p data-lang="de">Autor: Lee Carroll<br>Kryon ist ein magnetischer Dienstleistungsteam von Vega, das Botschaften durch das Medium Lee Carroll weltweit übermittelt.</p>
             </div>
             
-            <h2>👽 阿米星星的小孩 (The Little Prince)</h2>
+            <h2 data-lang="zh-TW">👽 阿米星星的小孩 (The Little Prince)</h2>
+            <h2 data-lang="zh-CN">👽 阿米星星的小孩 (The Little Prince)</h2>
+            <h2 data-lang="en">👽 The Little Prince</h2>
+            <h2 data-lang="ja">👽 星の王子さま</h2>
+            <h2 data-lang="ko">👽 어린 왕자</h2>
+            <h2 data-lang="es">👽 El Principito</h2>
+            <h2 data-lang="fr">👽 Le Petit Prince</h2>
+            <h2 data-lang="de">👽 Der Kleine Prinz</h2>
             <div class="book-box">
-                <h3>《小王子》</h3>
-                <p>作者：安東尼·德·聖修伯里</p>
-                <p>是一部充滿哲理與愛的經典童話，講述B-612星球上的小王子拜訪各個星球的故事，探討愛、責任與本質。</p>
+                <h3 data-lang="zh-TW">《小王子》</h3>
+                <h3 data-lang="zh-CN">《小王子》</h3>
+                <h3 data-lang="en">The Little Prince</h3>
+                <h3 data-lang="ja">《星の王子さま》</h3>
+                <h3 data-lang="ko">《어린 왕자》</h3>
+                <h3 data-lang="es">El Principito</h3>
+                <h3 data-lang="fr">Le Petit Prince</h3>
+                <h3 data-lang="de">Der Kleine Prinz</h3>
+                <p data-lang="zh-TW">作者：安東尼·德·聖修伯里<br>是一部充滿哲理與愛的經典童話，講述B-612星球上的小王子拜訪各個星球的故事，探討愛、責任與本質。</p>
+                <p data-lang="zh-CN">作者：安东尼·德·圣修伯里<br>是一部充满哲理与爱的经典童话，讲述B-612星球上的小王子拜访各个星球的故事，探讨爱、责任与本质。</p>
+                <p data-lang="en">Author: Antoine de Saint-Exupéry<br>A classic fairy tale full of philosophy and love, telling the story of a little prince from planet B-612 visiting various planets, exploring love, responsibility and essence.</p>
+                <p data-lang="ja">著者：アントワーヌ・ド・サン＝テグジュペリ<br>哲学と愛に満ちた古典的な童話で、B-612星の王子が様々な星を訪れる物語。</p>
+                <p data-lang="ko">著者：안투안 드 생테크스페리<br>철학과 사랑으로 가득한 고전 동화로,B-612 행성의 어린 왕자가 다양한 행성을 방문하는 이야기.</p>
+                <p data-lang="es">Autor: Antoine de Saint-Exupéry<br>Un cuento clásico lleno de filosofía y amor, cuentan la historia del principito del planeta B-612 visitando varios planetas.</p>
+                <p data-lang="fr">Auteur: Antoine de Saint-Exupéry<br>Un conte classique plein de philosophie et d'amour, racontant l'histoire du petit prince de la planète B-612 visitant diverses planètes.</p>
+                <p data-lang="de">Autor: Antoine de Saint-Exupéry<br>Ein klassisches Märchen voller Philosophie und Liebe, erzählt die Geschichte des kleinen Prinzen vom Planeten B-612, der verschiedene Planeten besucht.</p>
             </div>
             
-            <h2>🌌 宇宙之心</h2>
+            <h2 data-lang="zh-TW">🔗 線上資源</h2>
+            <h2 data-lang="zh-CN">🔗 在线资源</h2>
+            <h2 data-lang="en">🔗 Online Resources</h2>
+            <h2 data-lang="ja">🔗 オンラインリソース</h2>
+            <h2 data-lang="ko">🔗 온라인 리소스</h2>
+            <h2 data-lang="es">🔗 Recursos en Línea</h2>
+            <h2 data-lang="fr">🔗 Ressources en Ligne</h2>
+            <h2 data-lang="de">🔗 Online Ressourcen</h2>
             <div class="book-box">
-                <h3>《宇宙之心》</h3>
-                <p>探索宇宙的起源與意識，講述人類與宇宙的連結。</p>
-            </div>
-            
-            <h2>📖 更多推薦</h2>
-            <div class="book-box">
-                <h3>靈性成長書單</h3>
-                <p>• 《當下的力量》- 艾克哈特·托勒<br>
-                • 《靈魂的暗道》- 萊斯特·萊文森<br>
-                • 《塞托瑪地》- 羅伯特·安東尼<br>
-                • 《與神對話》- 尼爾·唐納德·沃爾<br>
-                • 《奇蹟課程》</p>
-            </div>
-            
-            <h2>🔗 線上資源</h2>
-            <div class="book-box">
-                <h3>相關網站</h3>
-                <p>• Kryon 官網: kryon.com<br>
-                • 昴宿星人資訊: geocities.ws/futureufo/<br>
-                • 未來之書: futurebook-phi.vercel.app</p>
+                <h3 data-lang="zh-TW">相關網站</h3>
+                <h3 data-lang="zh-CN">相关网站</h3>
+                <h3 data-lang="en">Related Websites</h3>
+                <h3 data-lang="ja">関連サイト</h3>
+                <h3 data-lang="ko">관련 웹사이트</h3>
+                <h3 data-lang="es">Sitios Relacionados</h3>
+                <h3 data-lang="fr">Sites Connexes</h3>
+                <h3 data-lang="de">Verwandte Websites</h3>
+                <p data-lang="zh-TW">• Kryon 官網: kryon.com<br>• 昴宿星人資訊: geocities.ws/futureufo/<br>• 未來之書: futurebook-phi.vercel.app</p>
+                <p data-lang="zh-CN">• Kryon 官网: kryon.com<br>• 昴宿星人资讯: geocities.ws/futureufo/<br>• 未来之书: futurebook-phi.vercel.app</p>
+                <p data-lang="en">• Kryon Official: kryon.com<br>• Pleiadian Info: geocities.ws/futureufo/<br>• Future Book: futurebook-phi.vercel.app</p>
+                <p data-lang="ja">• Kryon 公式サイト: kryon.com<br>• プレイアディアン情報: geocities.ws/futureufo/<br>• フューチャーブック: futurebook-phi.vercel.app</p>
+                <p data-lang="ko">• Kryon 공식사이트: kryon.com<br>• 플레이아디안 정보: geocities.ws/futureufo/<br>• 미래의 책: futurebook-phi.vercel.app</p>
+                <p data-lang="es">• Kryon Oficial: kryon.com<br>• Info Pleiadianos: geocities.ws/futureufo/<br>• Libro del Futuro: futurebook-phi.vercel.app</p>
+                <p data-lang="fr">• Kryon Officiel: kryon.com<br>• Info Pléiades: geocities.ws/futureufo/<br>• Livre du Futur: futurebook-phi.vercel.app</p>
+                <p data-lang="de">• Kryon Offiziell: kryon.com<br>• Pleiadian Info: geocities.ws/futureufo/<br>• Zukunftsbuch: futurebook-phi.vercel.app</p>
             </div>
         </div>
         
-        <p class="note">
-            預言聽聽，姑妄聽之。請保持理性判斷。
-        </p>
+        <p class="note" data-lang="zh-TW">預言聽聽，姑妄聽之。請保持理性判斷。</p>
+        <p class="note" data-lang="zh-CN">预言听听，姑妄听之。请保持理性判断。</p>
+        <p class="note" data-lang="en">Take prophecies with a grain of salt. Please maintain rational judgment.</p>
+        <p class="note" data-lang="ja">予言は眉に唾を付けて聞いてください。理性的な判断を維持してください。</p>
+        <p class="note" data-lang="ko">예언은 비판적으로 판단하세요. 합리적인 판단을 유지하세요.</p>
+        <p class="note" data-lang="es">Tome las profecías con cautela. Por favor mantenga un juicio racional.</p>
+        <p class="note" data-lang="fr">Prenez les prophéties avec un grain de sel. S'il vous plaît maintenez un jugement rationnel.</p>
+        <p class="note" data-lang="de">Prophezeiungen kritisch betrachten. Bitte bewahren Sie ein rationales Urteil.</p>
     </div>
 </body>
 </html>
