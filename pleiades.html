@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>昴宿星人的訊息 - 未來之書</title>
+    <title data-lang="zh-TW">昴宿星人的訊息 - 未來之書</title>
+    <title data-lang="zh-CN">昴宿星人的信息 - 未来之书</title>
+    <title data-lang="en">Pleiadian Messages - Future Book</title>
+    <title data-lang="ja">プレイアディアン メッセージ - フューチャーブック</title>
+    <title data-lang="ko">플레이아디안 메시지 - 미래의 책</title>
+    <title data-lang="es">Mensajes Pleiadianos - Libro del Futuro</title>
+    <title data-lang="fr">Messages des Pléiades - Livre du Futur</title>
+    <title data-lang="de">Pleiadianische Botschaften - Zukunftsbuch</title>
+    <title data-lang="pt">Mensagens Pleiadianas - Livro do Futuro</title>
+    <title data-lang="ru">Послания Плеяд - Книга Будущего</title>
+    <title data-lang="ar">رسائل بيان - كتاب المستقبل</title>
+    <title data-lang="hi">प्लेडियन संदेश - फ्यूचर बुक</title>
+    <title data-lang="th">ข้อความเพลเดียน - หนังสืออนาคต</title>
+    <title data-lang="vi">Tin nhắn Pleiades - Sách Tương lai</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -96,62 +109,323 @@
                 link.setAttribute('href', href + '?lang=' + lang);
             }
         });
+        document.querySelectorAll('[data-lang]').forEach(el => {
+            if (el.getAttribute('data-lang') !== lang) {
+                el.style.display = 'none';
+            }
+        });
     </script>
     <div class="container">
-        <a href="index.html" class="back-link">← 返回首頁</a>
+        <a href="index.html" class="back-link" data-lang="zh-TW">← 返回首頁</a>
+        <a href="index.html" class="back-link" data-lang="zh-CN">← 返回首页</a>
+        <a href="index.html" class="back-link" data-lang="en">← Back to Home</a>
+        <a href="index.html" class="back-link" data-lang="ja">← ホームに戻る</a>
+        <a href="index.html" class="back-link" data-lang="ko">← 홈으로 돌아가기</a>
+        <a href="index.html" class="back-link" data-lang="es">← Volver al Inicio</a>
+        <a href="index.html" class="back-link" data-lang="fr">← Retour à l'Accueil</a>
+        <a href="index.html" class="back-link" data-lang="de">← Zurück zur Startseite</a>
+        <a href="index.html" class="back-link" data-lang="pt">← Voltar ao Início</a>
+        <a href="index.html" class="back-link" data-lang="ru">← На главную</a>
+        <a href="index.html" class="back-link" data-lang="ar">← العودة للرئيسية</a>
+        <a href="index.html" class="back-link" data-lang="hi">← होम पर वापस</a>
+        <a href="index.html" class="back-link" data-lang="th">← กลับหน้าหลัก</a>
+        <a href="index.html" class="back-link" data-lang="vi">← Quay về Trang chủ</a>
         
-        <h1>人類有九次機會改變世界</h1>
-        <p class="subtitle">昴宿星人的訊息 (1974年)</p>
+        <h1 data-lang="zh-TW">人類有九次機會改變世界</h1>
+        <h1 data-lang="zh-CN">人类有九次机会改变世界</h1>
+        <h1 data-lang="en">Humanity Has Nine Chances to Change the World</h1>
+        <h1 data-lang="ja">人類は世界を改变する9つの機会を持っていた</h1>
+        <h1 data-lang="ko">인류는 세계를 바꿀 9번의 기회를 가지고 있었다</h1>
+        <h1 data-lang="es">La humanidad tuvo nueve oportunidades de cambiar el mundo</h1>
+        <h1 data-lang="fr">L'humanité a eu neuf chances de changer le monde</h1>
+        <h1 data-lang="de">Die Menschheit hatte neun Chancen, die Welt zu verändern</h1>
+        <h1 data-lang="pt">A humanidade teve nove chances de mudar o mundo</h1>
+        <h1 data-lang="ru">У человечества было девять шансов изменить мир</h1>
+        <h1 data-lang="ar">للبشرية تسع فرص لتغيير العالم</h1>
+        <h1 data-lang="hi">मानवता के पास दुनिया को बदलने के नौ मौके हैं</h1>
+        <h1 data-lang="th">มนุษย์มี 9 โอกาสที่จะเปลี่ยนโลก</h1>
+        <h1 data-lang="vi">Nhân loại có 9 cơ hội thay đổi thế giới</h1>
+        
+        <p class="subtitle" data-lang="zh-TW">昴宿星人的訊息 (1974年)</p>
+        <p class="subtitle" data-lang="zh-CN">昴宿星人的信息 (1974年)</p>
+        <p class="subtitle" data-lang="en">Pleiadian Messages (1974)</p>
+        <p class="subtitle" data-lang="ja">プレイアディアン メッセージ (1974年)</p>
+        <p class="subtitle" data-lang="ko">플레이아디안 메시지 (1974년)</p>
+        <p class="subtitle" data-lang="es">Mensajes Pleiadianos (1974)</p>
+        <p class="subtitle" data-lang="fr">Messages des Pléiades (1974)</p>
+        <p class="subtitle" data-lang="de">Pleiadianische Botschaften (1974)</p>
+        <p class="subtitle" data-lang="pt">Mensagens Pleiadianas (1974)</p>
+        <p class="subtitle" data-lang="ru">Послания Плеяд (1974)</p>
+        <p class="subtitle" data-lang="ar">رسائل بيان (1974)</p>
+        <p class="subtitle" data-lang="hi">प्लेडियन संदेश (1974)</p>
+        <p class="subtitle" data-lang="th">ข้อความเพลเดียน (1974)</p>
+        <p class="subtitle" data-lang="vi">Tin nhắn Pleiades (1974)</p>
         
         <div class="content">
-            <div class="highlight">
-                當初第一次看到我是很震撼的，這篇1974年寫的如今看預言正確無誤，外星人到未來看地球批評的很正確，希望地球的人類能改變悲慘的命運，但是最終沒有人聽。
-            </div>
+            <div class="highlight" data-lang="zh-TW">當初第一次看到我是很震撼的，這篇1974年寫的如今看預言正確無誤，外星人到未來看地球批評的很正確，希望地球的人類能改變悲慘的命運，但是最終沒有人聽。</div>
+            <div class="highlight" data-lang="zh-CN">当初第一次看到我是很震撼的，这篇1974年写的如今看预言正确无误，外星人到未来看地球批评的很正确，希望地球的人类能改变悲惨的命运，但是最终没有人听。</div>
+            <div class="highlight" data-lang="en">When I first saw this, it was a tremendous shock. Written in 1974, looking at the prophecies now, they are accurate. Aliens viewing Earth from the future criticize very correctly. Hopefully Earth's humanity can change their tragic fate, but ultimately no one listened.</div>
+            <div class="highlight" data-lang="ja">初めて見た時は非常に衝撃的でした。1974年に書かれたこの予言は、今では正確であることが和外 星人が未来から地球を見て非常に正しく批判しています。地球の人類が悲惨な運命を変えることができることを望みますが、最終的に誰も聞きませんでした。</div>
+            <div class="highlight" data-lang="ko">처음 보았을 때 매우 충격적이었습니다. 1974년에 쓰인 이 예언은 지금 보면 정확합니다. 미래에서 지구를 보는 외星人들은 매우 정확하게 비판합니다. 지구 인류가悲惨한 운명을 변경할 수 있기를 바라며, 하지만 결국 아무도 듣지 않았습니다.</div>
+            <div class="highlight" data-lang="es">Cuando lo vi por primera vez, fue un gran shock. Escrito en 1974, mirando las profecías ahora, son precisas. Los aliens que ven la Tierra desde el futuro critican muy correctamente. Esperemos que la humanidad de la Tierra pueda cambiar su trágico destino, pero al final nadie escuchó.</div>
+            <div class="highlight" data-lang="fr">Quand je l'ai vu pour la première fois, ce fut un tremendous choc. Écrit en 1974, en regardant les prophéties maintenant, elles sont précises. Les aliens regardant la Terre depuis le futur critiquent très correctement. Espérons que l'humanité de la Terre peut changer son destin tragique, mais finalement personne n'a écouté.</div>
+            <div class="highlight" data-lang="de">Als ich das zum ersten Mal sah, war es ein tremendous Schock. Geschrieben 1974, jetzt auf die Prophezeiungen blickend, sind sie genau. Außerirdische, die die Erde von der Zukunft aus betrachten, kritisieren sehr korrekt. Hoffentlich kann die Menschheit der Erde ihr tragisches Schicksal ändern, aber letztendlich hörte niemand zu.</div>
+            <div class="highlight" data-lang="pt">Quando vi pela primeira vez, foi um grande choque. Escrito em 1974, olhando para as profecias agora, elas são precisas. Os aliens que vêem a Terra do futuro criticam muito corretamente. Esperemos que a humanidade da Terra possa mudar seu destino trágico, mas no final ninguém ouviu.</div>
+            <div class="highlight" data-lang="ru">Когда я впервые это увидел, это было огромным шоком. Написанное в 1974 году, глядя на пророчества сейчас, они точны. Инопланетяне, смотрящие на Землю из будущего, критикуют очень правильно. Надеемся, что земное человечество может изменить свою трагическую судьбу, но в итоге никто не слушал.</div>
+            <div class="highlight" data-lang="ar">عندما رأيتها لأول مرة كانت صدمة هائلة. مكتوبة عام 1974، والنبوات الأن تبدو دقيقة.aliens الذين يرون الأرض من المستقبل ي批评ون بشكل صحيح جداً.</div>
+            <div class="highlight" data-lang="hi">जब मैंने पहली बार यह देखा, यह एक बड़ा झटका था। 1974 में लिखा गया, अब भविष्यवाणियों को देखते हुए, वे सही हैं। भविष्य से पृथ्वी को देखने वाले एलियंस बहुत सही निंदा करते हैं।</div>
+            <div class="highlight" data-lang="th">เมื่อฉันเห็นครั้งแรกมันเป็นความตกใจอย่างมาก เขียนในปี 1974 ดูคำทำนายตอนนี้พวกมันถูกต้อง มนุษย์ต่างดาวที่มองโลกจากอนาคตวิจารณ์อย่างถูกต้อง</div>
+            <div class="highlight" data-lang="vi">Khi tôi nhìn thấy điều này lần đầu, đó là một cú sốc lớn. Được viết năm 1974, nhìn vào các tiên tri bây giờ, chúng chính xác. Người ngoài hành tinh nhìn Trái Đất từ tương lai phê bình rất đúng.</div>
             
-            <h2>第一次機會</h2>
-            <p>在1946年之前的兩次世界大戰，是首次最大的預警。如果人類能矯正錯誤，大地將再度春回，這是給地球居民最豐富的回報。但是冷戰期間，人類並沒有改變。戰爭重新回到人間，人們繼續飲酒作樂。新發明被濫用於恐怖毀滅而非提高人類靈性——死神的時刻來臨了。</p>
+            <h2 data-lang="zh-TW">第一次機會</h2>
+            <h2 data-lang="zh-CN">第一次机会</h2>
+            <h2 data-lang="en">First Chance</h2>
+            <h2 data-lang="ja">最初の機会</h2>
+            <h2 data-lang="ko">첫 번째 기회</h2>
+            <h2 data-lang="es">Primera Oportunidad</h2>
+            <h2 data-lang="fr">Première Chance</h2>
+            <h2 data-lang="de">Erste Chance</h2>
+            <h2 data-lang="pt">Primeira Chance</h2>
+            <h2 data-lang="ru">Первый Шанс</h2>
+            <h2 data-lang="ar">الفرصة الأولى</h2>
+            <h2 data-lang="hi">पहला मौका</h2>
+            <h2 data-lang="th">โอกาสแรก</h2>
+            <h2 data-lang="vi">Cơ hội đầu tiên</h2>
             
-            <h2>第二次機會</h2>
-            <p>此時戰爭仍持續著，人類開發太空領域只為裝飾他們的驕慢。死亡增多，人與人的爭執越來越劇烈。愚蠢的恐怖活��、嗜殺的獨裁者不斷出現，形成大量的寡婦、孤兒、廢墟、荒地。飢餓疾病廣漫於國際間，受污染的地區擴大，大自然承受巨大的痛苦。</p>
+            <p data-lang="zh-TW">在1946年之前的兩次世界大戰，是首次最大的預警。如果人類能矯正錯誤，大地將再度春回，這是給地球居民最豐富的回報。但是冷戰期間，人類並沒有改變。戰爭重新回到人間，人們繼續飲酒作樂。新發明被濫用於恐怖毀滅而非提高人類靈性——死神的時刻來臨了。</p>
+            <p data-lang="zh-CN">在1946年之前的两次世界大战，是首次最大的预警。如果人类能矫正错误，大地将再度春回，这是给地球居民最丰富的回报。但是冷战期间，人类并没有改变。战争重新回到人间，人们继续饮酒作乐。新发明被滥用於恐怖毁灭而非提高人类灵性——死神的时刻来临了。</p>
+            <p data-lang="en">The two world wars before 1946 were the first and greatest warning. If humanity could correct its mistakes, the land would spring back to life again — this would be the richest reward for Earth's inhabitants. However, during the Cold War, humanity did not change. War returned to humanity, and people continued to indulge in pleasure. New inventions were abused for terror and destruction rather than elevating human spirituality — the hour of death arrived.</p>
+            <p data-lang="ja">1946年之前的2つの世界戦争は最初の最大の警告でした。人類が過ちを是正できれば、土地は再び春になり、これは地球の住民への最も豊富な報酬となるでしょう。しかし、冷戦の間、人類は変わりませんでした。戦争は人類に返回し、人々は快楽を享受し続けました。新しい发明は恐怖と破壊のために濫用され、人間の霊性を高めるのではなく——死の時刻が到来しました。</p>
+            <p data-lang="ko">1946년 이전의 두 세계대전은 최초의 가장 큰 경고였습니다. 인류가 실수를 바로잡을 수 있다면 땅은 다시 봄이 될 것입니다——이것은 지구 주민에게 가장 풍성한 보상이 될 것입니다. 그러나 냉전 기간 동안 인류는 변하지 않았습니다. 전쟁은 인류에게 돌아왔고 사람들은 계속享楽에 탐닉했습니다. 새로운 발명들은 테러와 파괴를 위해 남용되어 인간의霊性を 높이는 대신——죽음의 시간이 찾아왔습니다.</p>
+            <p data-lang="es">Las dos guerras mundiales antes de 1946 fueron la primera y mayor advertencia. Si la humanidad pudiera corregir sus errores, la tierra volvería a la vida —— esta sería la recompensa más rica para los habitantes de la Tierra. Sin embargo, durante la Guerra Fría, la humanidad no cambió. La guerra regresó a la humanidad, y la gente continuó entregándose al placer. Los nuevos inventos fueron abusados para el terror y la destrucción en lugar de elevar la espiritualidad humana —— llegó la hora de la muerte.</p>
+            <p data-lang="fr">Les deux guerres mondiales avant 1946 étaient la première et la plus grande mise en garde. Si l'humanité pouvait corriger ses erreurs, la terre reviendrait à la vie —— ce serait la récompense la plus riche pour les habitants de la Terre. Cependant, pendant la Guerre froide, l'humanité n'a pas changé. La guerre est revenue à l'humanité, et les gens ont continué à se livrer au plaisir. Les nouvelles inventions ont été utilisées pour la terreur et la destruction plutôt que pour élever la spiritualité humaine —— l'heure de la mort est arrivée.</p>
+            <p data-lang="de">Die beiden Weltkriege vor 1946 waren die erste und größte Warnung. Wenn die Menschheit ihre Fehler korrigieren könnte, würde das Land wieder aufleben —— dies wäre die reichste Belohnung für die Bewohner der Erde. Während des Kalten Krieges änderte sich die Menschheit jedoch nicht. Der Krieg kehrte zur Menschheit zurück, und die Menschen setzten ihr Vergnügen fort. Neue Erfindungen wurden für Terror und Zerstörung missbraucht, anstatt die menschliche Spiritualität zu erhöhen —— die Stunde des Todes kam.</p>
+            <p data-lang="pt">As duas guerras mundiais antes de 1946 foram o primeiro e maior aviso. Se a humanidade pudesse corrigir seus erros, a terra voltaria à vida —— esta seria a recompensa mais rica para os habitantes da Terra. No entanto, durante a Guerra Fria, a humanidade não mudou. A guerra voltou à humanidade, e as pessoas continuaram a se entregar ao prazer. Novas invenções foram usadas para terror e destruição em vez de elevar a espiritualidade humana —— a hora da morte chegou.</p>
+            <p data-lang="ru">Два мировых конфликта до 1946 года были первым и величайшим предупреждением. Если человечество сможет исправить свои ошибки, земля снова оживёт —— это будет богатейшей наградой для жителей Земли. Однако во время холодной войны человечество не изменилось. Война вернулась к человечеству, и люди продолжали предаваться удовольствию. Новые изобретения использовались для террора и разрушения вместо повышения духовности человека —— пришёл час смерти.</p>
+            <p data-lang="ar">حربان عالميتان قبل 1946 كانت التحذير الأول والأكبر. لو استطاع البشر تصحيح أخطائهم، ستعود الأرض إلى الحياة.</p>
+            <p data-lang="hi">1946 से पहले दो विश्व युद्ध पहली और सबसे बड़ी चेतावनी थी। अगर मानवता अपनी गलतियों को सुधार सकती है, तो जमीन फिर से जीवित हो जाएगी।</p>
+            <p data-lang="th">สองสงครามโลกก่อนปี 1946 เป็นการเตือนครั้งแรกและใหญ่ที่สุด ถ้ามนุษย์แก้ไขข้อผิดพลาดได้ ดินจะกลับมามีชีวิตอีกครั้ง</p>
+            <p data-lang="vi">Hai cuộc chiến tranh thế giới trước năm 1946 là cảnh báo đầu tiên và lớn nhất. Nếu nhân loại có thể sửa chữa sai lầm của mình, đất sẽ sống lại một lần nữa.</p>
             
-            <h2>第三次機會</h2>
-            <p>祈求安定的聲音不斷發出，但是武士的戰鼓仍再度響起。地球顫抖，地震不斷增加，大地發出痛苦的怒吼。人類裝聾作啞，故意蒙蔽自己的雙眼。大自然生病了，氣候也產生劇變。</p>
+            <h2 data-lang="zh-TW">第二次機會</h2>
+            <h2 data-lang="zh-CN">第二次机会</h2>
+            <h2 data-lang="en">Second Chance</h2>
+            <h2 data-lang="ja">二番目の機会</h2>
+            <h2 data-lang="ko">두 번째 기회</h2>
+            <h2 data-lang="es">Segunda Oportunidad</h2>
+            <h2 data-lang="fr">Deuxième Chance</h2>
+            <h2 data-lang="de">Zweite Chance</h2>
+            <h2 data-lang="pt">Segunda Chance</h2>
+            <h2 data-lang="ru">Второй Шанс</h2>
+            <h2 data-lang="ar">الفرصة الثانية</h2>
+            <h2 data-lang="hi">दूसरा मौका</h2>
+            <h2 data-lang="th">โอกาสที่สอง</h2>
+            <h2 data-lang="vi">Cơ hội thứ hai</h2>
             
-            <h2>第四次機會</h2>
-            <p>第三勢力不斷地擴充他的力量，而他的錯誤指揮將無辜者引向死亡。氣候異常又更加劇了，巨大的雨量、水災、乾旱、河流暴漲讓莊稼不斷流失。大自然的聲音回來了，穿戴著死亡，那是另一個警告。地球不斷地顫抖，他的哭泣沒有被人類聽到。</p>
+            <p data-lang="zh-TW">此時戰爭仍持續著，人類開發太空領域只為裝飾他們的驕慢。死亡增多，人與人的爭執越來越劇烈。愚蠢的恐怖活動、嗜殺的獨裁者不斷出現，形成大量的寡婦、孤兒、廢墟、荒地。飢餓疾病廣漫於國際間，受污染的地區擴大，大自然承受巨大的痛苦。</p>
+            <p data-lang="zh-CN">此时战争仍持续着，人类开发太空领域只为装饰他们的骄慢。死亡增多，人与人的争执越来越剧烈。愚蠢的恐怖活动、嗜杀的独裁者不断出现，形成大量的寡妇、孤儿、废墟、荒地。饥饿疾病广漫於国际间，受污染的地区扩大，大自然承受巨大的痛苦。</p>
+            <p data-lang="en">At this time, war continued, and humanity's development of space was merely to adorn their pride. Deaths increased, and conflicts between people grew more intense. Stupid terror acts and bloodthirsty dictators kept emerging, creating vast numbers of widows, orphans, ruins, and wasteland. Diseases of hunger spread internationally, polluted areas expanded, and nature suffered greatly.</p>
+            <p data-lang="ja">この時、戦争は続き、人類の宇宙開発は単なる驕慢な而已でした。死亡が増え、人々の間の紛争はますます激化しました。ばかなテロ行為と血貪い独裁者が次々と現れ、大量の寡妇、孤儿、廃墟、荒地を作りました。餓死病は国際的に広がり、汚染地域は拡大し、自然は大きな苦しみを被りました。</p>
+            <p data-lang="ko">이 시기에 전쟁은 계속되었고 인류의 우주 개발은 그들慢慢을 장식하기 위한것에 불과했습니다. 사망이 증가했고 사람들이 분쟁도 점점 치열해졌습니다. 어리석은 테러 행위와 피에及相关 독재자들이 계속 나타나大量の 미혼母亲, 고아, 폐허, 황지 만들었습니다. 기아 질병이 국제적으로 확산되고, 오염 지역이 확대되었으며, 자연은 큰 고통을 겪었습니다.</p>
+            <p data-lang="es">En este momento, la guerra continuó, y el desarrollo espacial de la humanidad fue meramente para adornar su orgullo. Las muertes aumentaron, y los conflictos entre personas se volvieron más intensos. Estúpidos actos de terror y dictadores sedientos de sangre siguieron emergiendo, creando gran número de viudas, huérfanos, ruinas y tierras baldías. Las enfermedades del hambre se difundieron internacionalmente, las áreas contaminadas se expandieron, y la naturaleza sufrió enormemente.</p>
+            <p data-lang="fr">À ce moment, la guerre a continué, et le développement spatial de l'humanité était simplement pour orner leur orgueil. Les décès ont augmenté, et les conflits entre personnes sont devenus plus intenses. Des actes de terreur stupides et des dictateurs assoiffés de sang ont continué à émerger, créant un grand nombre de veuves, d'orphelins, de ruines et de terres dévastées. Les maladies de la faim se sont propagées internationalement, les zones polluées se sont élargies, et la nature a beaucoup souffert.</p>
+            <p data-lang="de">Zu dieser Zeit setzte sich der Krieg fort, und die Entwicklung des Weltraums durch die Menschheit war nur, um ihren Stolz zu schmücken. Die Todesfälle nahmen zu, und die Konflikte zwischen den Menschen wurden intensiver. Dumme Terrorakte und blutdurstige Diktatoren tauchten weiterhin auf und schufen große Zahlen von Witwen, Waisen, Ruinen und Ödland. Hungerkrankheiten verbreiteten sich international, verschmutzte Gebiete erweiterten sich, und die Natur litt stark.</p>
+            <p data-lang="pt">Neste momento, a guerra continuou, e o desenvolvimento espacial da humanidade foi meramente para adornar seu orgulho. As mortes aumentaram, e os conflitos entre pessoas se tornaram mais intensos. Atos de terror estúpidos e ditadores sedentos por sangue continuaram surgindo, criando grande número de viúvas, órfãos, ruínas e terras baldias. Doenças da fome se espalharam internacionalmente, áreas poluídas se expandiram, e a natureza sofreu enormemente.</p>
+            <p data-lang="ru">В это время война продолжалась, а развитие космоса человечеством было лишь для украшения его гордыни. Смерти увеличивались, и конфликты между людьми становились более интенсивными. Глупые террористические акты и кровожадные диктаторы продолжали появляться, создавая огромное количество вдов, сирот, руин и пустошей. Болезни голода распространялись международно, загрязнённые территории расширялись, и природа сильно страдала.</p>
+            <p data-lang="ar">في هذا الوقت استمرت الحرب وتطور الفضاء البشري كان مجرد لتزيين كبريائهم.</p>
+            <p data-lang="hi">इस समय युद्ध जारी रहा और मानवता का अंतरिक्ष विकास केवल अपने घमंड को सजाने के लिए था।</p>
+            <p data-lang="th">ในช่วงนี้สงครามยังคงดำเนินต่อไป และการพัฒนาอวกาศของมนุษย์เป็นเพียงเพื่อตกแต่งความภาคยาใจของพวกเขา</p>
+            <p data-lang="vi">Vào thời điểm này, chiến tranh tiếp tục, và sự phát triển không gian của nhân loại chỉ để trang trí sự kiêu ngạo của họ.</p>
             
-            <h2>第五次機會</h2>
-            <p>這攻擊是無情的，各國充滿了災變。他們雖口說和平，卻不斷發動戰爭。無情地互相攻擊，無辜者因而戰死。人們不省悟，因為他們不想省悟。驕慢遮蒙了他們的雙眼。提倡和平者的聲音不受重視，暴力不斷增加，恐怖主義成為常理。</p>
+            <h2 data-lang="zh-TW">第三次機會</h2>
+            <h2 data-lang="zh-CN">第三次机会</h2>
+            <h2 data-lang="en">Third Chance</h2>
+            <h2 data-lang="ja">三番目の機会</h2>
+            <h2 data-lang="ko">세 번째 기회</h2>
+            <h2 data-lang="es">Tercera Oportunidad</h2>
+            <h2 data-lang="fr">Troisième Chance</h2>
+            <h2 data-lang="de">Dritte Chance</h2>
+            <h2 data-lang="pt">Terceira Chance</h2>
+            <h2 data-lang="ru">Третий Шанс</h2>
+            <h2 data-lang="ar">الفرصة الثالثة</h2>
+            <h2 data-lang="hi">तीसरा मौका</h2>
+            <h2 data-lang="th">โอกาสที่สาม</h2>
+            <h2 data-lang="vi">Cơ hội thứ ba</h2>
             
-            <h2>第六次機會</h2>
-            <p>人類社會迅速下降崩潰，撒旦的計劃又向前了一步。氣候變化加速，已是顯而易見。最關鍵的時期到來了，上蒼關閉了他的訊息。大水氾濫、土石流、雪崩摧毀了家園，新的疾病出現了，地球的大災難期來臨。這是充滿詐欺、騙子、謊言的年代。</p>
+            <p data-lang="zh-TW">祈求安定的聲音不斷發出，但是武士的戰鼓仍再度響起。地球顫抖，地震不斷增加，大地發出痛苦的怒吼。人類裝聾作啞，故意蒙蔽自己的雙眼。大自然生病了，氣候也產生劇變。</p>
+            <p data-lang="zh-CN">祈求安定的声音不断发出，但是武士的战鼓仍再度响起。地球颤抖，地震不断增加，大地发出痛苦的怒吼。人类装聋作哑，故意蒙蔽自己的双眼。大自然生病了，气候也产生剧变。</p>
+            <p data-lang="en">Voices seeking peace kept sounding, but the war drums beat again. Earth trembled, earthquakes increased continuously, and the land cried out in pain. Humanity pretended to be deaf and mute, deliberately blind to their own eyes. Nature became sick, and the climate drastically changed.</p>
+            <p data-lang="ja">平和を求める声が響き続けましたが、戦いの鼓は再び打ち鳴らされました。地球は震え、地震が増え続き、土地は苦痛の叫び声を上げました。人間はすべてを装い、自分自身の目を見えなくしました。自然は病気になり、気候も激しく変わりました。</p>
+            <p data-lang="ko">평화를を求める 목소리가 계속 들렸지만, 전쟁 북은 다시 울렸습니다. 지구는 떨렸고, 지진이 계속 증가했으며,土地는的痛苦에叫び声を었습니다. 인류는 귀遠い하고emouth하여, 자신의 눈을 Deliberately 가렸습니다. 자연은 아플게 되었고, 기후도剧烈하게 변했습니다.</p>
+            <p data-lang="es">Las voces que buscan la paz siguieron sonando, pero los tambores de guerra volvieron a sonar. La Tierra tembló, los terremotos aumentaron continuamente, y la tierra gritó de dolor. La humanidad fingió ser sorda y muda, deliberadamente ciega a sus propios ojos. La naturaleza se enfermó, y el clima cambió drásticamente.</p>
+            <p data-lang="fr">Les voix cherchant la paix ont continué à sonner, mais les tambours de guerre ont battu à nouveau. La Terre trembla, les tremblements de terre augmentèrent continuellement, et la terre cria de douleur. L'humanité fit semblant d'être sourde et muette, délibérément aveugle à ses propres yeux. La nature tomba malade, et le climat changea dramatiquement.</p>
+            <p data-lang="de">Stimmen, die Frieden suchten, erklangen weiterhin, aber die Kriegstrommeln schlugen erneut. Die Erde erzitterte, Erdbeben nahmen ständig zu, und das Land schrie vor Schmerz. Die Menschheit tat so, als wäre sie taub und stumm, absichtlich blind gegenüber ihren eigenen Augen. Die Natur wurde krank, und das Klima änderte sich drastisch.</p>
+            <p data-lang="pt">As vozes buscando paz continuaram a soar, mas os tambores de guerra bateram novamente. A Terra tremeu, os terremotos aumentaram continuamente, e a terra gritou de dor. A humanidade fincou ser surda e muda, deliberadamente cega aos seus próprios olhos. A natureza adoeceu, e o clima mudou drasticamente.</p>
+            <p data-lang="ru">Голоса, ищущие мира, продолжали звучать, но барабаны войны снова забили. Земля дрожала, землетрясения непрерывно увеличивались, и земля кричала от боли. Человечество притворялось глухим и немым, намеренно слепым к своим собственным глазам. Природа заболела, и климат резко изменился.</p>
+            <p data-lang="ar">أصوات البحث عن السلام استمرت فيiumsounding، لكن طبول الحرب ضربت مرة أخرى.</p>
+            <p data-lang="hi">शांति की आवाज़ें लगातार गूँजती रहीं, लेकिन युद्ध के ताल फिर से बजे।</p>
+            <p data-lang="th">เสียงที่แสวงหาความสงบยังคงดังขึ้น แต่กลองสงครามก็ตีอีกครั้ง</p>
+            <p data-lang="vi">Tiếng nói tìm kiếm hòa bình tiếp tục vang lên, nhưng trống chiến tranh lại đánh.</p>
+            
+            <h2 data-lang="zh-TW">第四次機會</h2>
+            <h2 data-lang="zh-CN">第四次机会</h2>
+            <h2 data-lang="en">Fourth Chance</h2>
+            <h2 data-lang="ja">四番目の機会</h2>
+            <h2 data-lang="ko">네 번째 기회</h2>
+            <h2 data-lang="es">Cuarta Oportunidad</h2>
+            <h2 data-lang="fr">Quatrième Chance</h2>
+            <h2 data-lang="de">Vierte Chance</h2>
+            <p data-lang="zh-TW">第三勢力不斷地擴充他的力量，而他的錯誤指揮將無辜者引向死亡。氣候異常又更加劇了，巨大的雨量、水災、乾旱、河流暴漲讓莊稼不斷流失。大自然的聲音回來了，穿戴著死亡，那是另一個警告。地球不斷地顫抖，他的哭泣沒有被人類聽到。</p>
+            <p data-lang="zh-CN">第三势力不断地扩充他的力量，而他的错误指挥将无辜者引向死亡。气候异常又更加剧了，巨大的雨量、水灾、干旱、河流暴涨让庄稼不断流失。大自然的声音回来了，穿着死亡，那是另一个警告。地球不断地颤抖，他的哭泣没有被人类听到。</p>
+            <p data-lang="en">The third force continuously expanded its power, and its erroneous commands led innocents to death. Climate abnormalities intensified further, with heavy rainfall, floods, droughts, and rivers overflowing causing crops to be constantly lost. Nature's voice returned, wearing death — another warning. Earth kept trembling, but its cries were not heard by humanity.</p>
+            <p data-lang="ja">第三勢力は彼の力を続け расширяし、彼の誤った命令は罪のない人々を死へ導きました。気候の異常はさらに加剧し、豪雨、洪水、干ばつ、川氾濫で作物が constantly失われました。自然の声は戻ってきました、死を装着して——もう一つの警告。地球は震え続けましたが、その叫びは人類に聞こえませんでした。</p>
+            <p data-lang="ko">제3세력은 지속적으로 그의 힘을 확장했고, 그의 잘못된 명령은无辜者들을 죽음으로 인도했습니다. 기후 이상이 더욱 강화되어, 많은 비, 홍수, 가뭄, 강 범람으로 인해作物이 끊임없이 잃어났습니다. 자연의 목소리가 돌아왔습니다, 죽음을 착용하여——다른 경고. 지구는 떨음을 계속했지만, 그의哭声は人間に聞こえませんでした.</p>
+            <p data-lang="es">La tercera fuerza continuó expandiendo su poder, y sus comandos erróneos llevaban a los inocentes a la muerte. Las anormalidades climáticas se intensificaron aún más, con lluvias intensas, inundaciones, sequías, y ríos desbordándose causando que los cultivos se perdieran constantemente. La voz de la naturaleza regresó, vestida de muerte — otra advertencia. La Tierra siguió temblando, pero sus gritos no fueron escuchados por la humanidad.</p>
+            <p data-lang="fr">La troisième force a Continué à étendre son pouvoir, et ses ordres erronés ont conduit les innocents à la mort. Les anomalies climatiques se sont intensifiées davantage, avec de fortes pluies, inondations, sécheresses, et rivières débordant causant la perte constante des récoltes. La voix de la nature est revenue, portant la mort — un autre avertissement. La Terre a continué à trembler, mais ses cris n'ont pas été entendus par l'humanité.</p>
+            <p data-lang="de">Die dritte Kraft erweiterte kontinuierlich ihre Macht, und ihre fehlerhaften Befehle führten Unschuldige in den Tod. Klimaanomalien verschärften sich weiter, mit starken Regenfällen, Überschwemmungen, Dürren und überlaufenden Flüssen, die ständig Ernten verloren gehen ließen. Die Stimme der Natur kehrte zurück, den Tod tragend — eine weitere Warnung. Die Erde bebte weiter, aber ihre Rufe wurden von der Menschheit nicht gehört.</p>
+            
+            <h2 data-lang="zh-TW">第五次機會</h2>
+            <h2 data-lang="zh-CN">第五次机会</h2>
+            <h2 data-lang="en">Fifth Chance</h2>
+            <h2 data-lang="ja">五番目の機会</h2>
+            <h2 data-lang="ko">다섯 번째 기회</h2>
+            <h2 data-lang="es">Quinta Oportunidad</h2>
+            <h2 data-lang="fr">Cinquième Chance</h2>
+            <h2 data-lang="de">Fünfte Chance</h2>
+            
+            <p data-lang="zh-TW">這攻擊是無情的，各國充滿了災變。他們雖口說和平，卻不斷發動戰爭。無情地互相攻擊，無辜者因而戰死。人們不省悟，因為他們不想省悟。驕慢遮蒙了他們的雙眼。提倡和平者的聲音不受重視，暴力不斷增加，恐怖主義成為常理。</p>
+            <p data-lang="zh-CN">这攻击是无情的，各国充满了灾变。他们虽口说和平，却不断发动战争。无情的互相攻击，无辜者因而战死。人们不省悟，因为他们不想省悟。骄慢遮蒙了他们的双眼。提倡和平者的声音不受重视，暴力不断增加，恐怖主义成为常理。</p>
+            <p data-lang="en">This attack was merciless, and countries were filled with catastrophes. They spoke of peace but continuously waged wars. They attacked each other ruthlessly, causing innocents to die in war. People did not come to their senses, because they did not want to. Arrogance blinded their eyes. The voices of peace advocates were not taken seriously, violence continuously increased, and terrorism became the norm.</p>
+            <p data-lang="ja">この攻撃は容赦なく、各国は災害で満ち溢れていました。彼らは平和を话しましたが、戦争を仕掛け続けました。彼らは容赦なく互いに攻撃し、無辜の人々が戦争で死にました。人々は悟りを開くことはありませんでした，因为他们不想悟りました。驕慢は彼らの目を覆いました。平和提唱者の声は真剣に受け止められず、暴力が増え続き、テロリズムが常态になりました。</p>
+            <p data-lang="ko">이 공격은 무자비했으며, 각국은 재난으로 가득했습니다. 그들은 평화について 말했지만 전쟁을 계속 수행했습니다. 그들은 무자비하게 서로 공격하여,无辜자들이 전쟁에서 죽었습니다. 사람들은 깨닫지 못했습니다,，因为他们不愿 깨닫었습니다.慢慢가 그들의 눈을 가렸습니다. 평화 옹호자들의 목소리가 진지하게 받아들여지지 않았고, 폭력이 지속적으로 증가했으며, 테러리즘이 Norm이 되었습니다.</p>
+            <p data-lang="es">Este ataque fue despiadado, y los países estaban llenos de catástrofes. Hablaron de paz pero continuaron Wage guerreando. Se atacaron sin piedad, causando que los inocentes murieran en guerra. Las personas no llegaron a sus sentidos, porque no querían. La arrogancia cegó sus ojos. Las voces de los defensores de la paz no fueron tomadas en serio, la violencia aumentó continuamente, y el terrorismo se convirtió en la norma.</p>
+            <p data-lang="fr">Cette attaque était impitoyable, et les pays étaient remplis de catastrophes. Ils ont parlé de paix mais ont Continué à faire la guerre. Ils se sont attaqués sans pitié, causant la mort des innocents en guerre. Les gens ne sont pas venus à eux, parce qu'ils ne voulaient pas. L'orgueil a aveuglé leurs yeux. Les voix des défenseurs de la paix n'ont pas été prises au sérieux, la violence a Continué à augmenter, et le terrorisme est devenu la norme.</p>
+            <p data-lang="de">Dieser Angriff war gnadenlos, und die Länder waren mit Katastrophen gefüllt. Sie sprachen von Frieden, aber führten weiterhin Kriege. Sie griffen sich rücksichtslos an, was dazu führte, dass Unschuldige im Krieg starben. Die Menschen kamen nicht zur Besinnung, weil sie nicht wollten. Stolz blendete ihre Augen. Die Stimmen der Friedensbefürworter wurden nicht ernst genommen, Gewalt nahm ständig zu, und Terrorismus wurde zur Norm.</p>
+            
+            <h2 data-lang="zh-TW">第六次機會</h2>
+            <h2 data-lang="zh-CN">第六次机会</h2>
+            <h2 data-lang="en">Sixth Chance</h2>
+            <h2 data-lang="ja">六番目の機会</h2>
+            <h2 data-lang="ko">여섯 번째 기회</h2>
+            <h2 data-lang="es">Sexta Oportunidad</h2>
+            <h2 data-lang="fr">Sixième Chance</h2>
+            <h2 data-lang="de">Sechste Chance</h2>
+            
+            <p data-lang="zh-TW">人類社會迅速下降崩潰，撒旦的計劃又向前了一步。氣候變化加速，已是顯而易見。最關鍵的時期到來了，上蒼關閉了他的訊息。大水氾濫、土石流、雪崩摧毀了家園，新的疾病出現了，地球的大災難期來臨。這是充滿詐欺、騙子、謊言的年代。</p>
+            <p data-lang="zh-CN">人类社会迅速下降崩溃，撒旦的计划又向前了一步。气候变化加速，已是显而易见。最关键的时期到来了，上苍关闭了他的讯息。大水氾滥、土石流、雪崩摧毁了家园，新的疾病出现了，地球的大灾难期来临。这是充满欺诈、骗子、谎言的年代。</p>
+            <p data-lang="en">Human society rapidly declined and collapsed, and Satan's plan moved forward another step. Climate change accelerated, becoming obvious. The most critical period arrived, and Heaven closed His messages. Floods, landslides, and avalanches destroyed homes, new diseases appeared, and Earth's great disaster period arrived. This was an age full of fraud, deceivers, and lies.</p>
+            <p data-lang="ja">人間社会は急速に衰退し崩壊し、サタンの計画はさらに一歩を進めました。気候変動は加速し、明らかになりました。最も重要な時期が来て、天は彼のメッセージを閉じました。洪水、土砂崩れ、雪崩が家新的を破壊し、新しい病気が現れ、地球の大災害時代がやってきました。これは詐欺、騙師、嘘で満ちた時代でした。</p>
+            <p data-lang="ko">인간 사회가 빠르게衰落하고 붕괴했으며, 사탄의 계획이 한 단계 나아갔습니다. 기후 변화가加速되어, 분명해졌습니다. 가장 중요한 시기가到来하고, 하늘은 그의 메시지를 닫았습니다.洪水, 산사태, 눈사태가 집을 철저하고, 새로운 질병이 나타나, 지구の大災害 시대가 찾아왔습니다. 이것은 사기, 사기師, 거짓으로 가득한時代이었습니다.</p>
+            <p data-lang="es">La sociedad humana Declinó rápidamente y colapsó, y el plan de Satán avanz otro paso. El cambio climático se aceleró, becoming obvio. El período más crítico llegó, y el cielo cerró Sus mensajes. Inundaciones, deslizamientos de tierra y avalanchas destruyeron hogares, aparecieron nuevas enfermedades, y el gran período de desastres de la Tierra llegó. Esta fue una era llena de fraude, engañadores y mentiras.</p>
+            <p data-lang="fr">La société humaine s'est rapidement Effondrée et effondrée, et le plan de Satan a avancé d'un pas. Le changement climatique s'est accéléré, diventant évident. La période la plus critique est arrivée, et le ciel a fermé Ses messages. Les inondations, glissements de terrain et avalanches ont détruit les maisons, de nouvelles maladies sont apparues, et la grande période de catastrophe de la Terre est arrivée. C'était une ère pleine de fraude, d'arnaqueurs et de mensonges.</p>
+            <p data-lang="de">Die menschliche Gesellschaft sank schnell zusammen und brach zusammen, und Satans Plan machte einen weiteren Schritt. Der Klimawandel beschleunigte sich, offensichtlich werdend. Die kritischste Periode kam, und der Himmel schloss Seine Nachrichten. Überschwemmungen, Erdrutsche und Lawinen zerstörten Häuser, neue Krankheiten erschienen, und die große Katastrophenzeit der Erde kam. Dies war eine Ära voller Betrug, Betrüger und Lügen.</p>
             
             <div class="warning">
-                <strong>這預言部分已經實現。</strong>
+                <strong data-lang="zh-TW">這預言部分已經實現。</strong>
+                <strong data-lang="zh-CN">这预言部分已经实现。</strong>
+                <strong data-lang="en">This prophecy has partially come true.</strong>
+                <strong data-lang="ja">この予言は部分的に的中しています。</strong>
+                <strong data-lang="ko">이 예언은 부분적으로 실현되었습니다.</strong>
+                <strong data-lang="es">Esta profecía se ha cumplido parcialmente.</strong>
+                <strong data-lang="fr">Cette prophétie s'est partiellement réalisées.</strong>
+                <strong data-lang="de">Diese Prophezeiung hat sich teilweise erfüllt.</strong>
+                <strong data-lang="pt">Esta profecia se cumpriu parcialmente.</strong>
+                <strong data-lang="ru">Это пророчество частично сбылось.</strong>
+                <strong data-lang="ar">تحققت هذه النبوءة جزئيا.</strong>
+                <strong data-lang="hi">यह भविष्यवाणी आंशिक रूप से सत्य हुई है।</strong>
+                <strong data-lang="th">คำทำนายนี้เป็นจริงบางส่วนแล้ว</strong>
+                <strong data-lang="vi">Tiên tri này đã thành hiện thực một phần.</strong>
             </div>
             
-            <h2>第七次機會</h2>
-            <p>死神統治了世界。他打擊那些充滿驕傲和財富的國家。那些古老的種族和恐怖主義的夥伴們尋找勝利的快樂。美洲大陸成了墳地。意大利、法國和西班牙也是一樣。這陣地跨了，聯盟形成了。各國政府忙於戰爭。當偉大的獨裁者發言時，全世界都傾聽並且相信他。同時這大地的地基已開始撼動，世界地圖改變了。教會傾倒了，大城市下沉，海水滾燙旋轉。飢餓成了最大的勝利者。</p>
+            <h2 data-lang="zh-TW">第七次機會</h2>
+            <h2 data-lang="zh-CN">第七次机会</h2>
+            <h2 data-lang="en">Seventh Chance</h2>
+            <h2 data-lang="ja">七番目の機会</h2>
+            <h2 data-lang="ko">일곱 번째 기회</h2>
+            <h2 data-lang="es">Séptima Oportunidad</h2>
+            <h2 data-lang="fr">Septième Chance</h2>
+            <h2 data-lang="de">Siebte Chance</h2>
             
-            <h2>第八次機會</h2>
-            <p>新的毀滅開始，武器大量使用。黑暗統治者擁有世界給予他的力量。令人驚訝致命的武器出現了，他們的肉體被分解。軍隊被溶化就像溶化的鉛一般。時間到了，太陽和月亮改變了顏色。不尋常的日蝕出現，大量的黑暗來臨了。兩億人受到傷害或毀滅。毒氣上升，害蟲增加，火舌如雨般自天空降下。</p>
+            <p data-lang="zh-TW">死神統治了世界。他打擊那些充滿驕傲和財富的國家。那些古老的種族和恐怖主義的夥伴們尋找勝利的快樂。美洲大陸成了墳地。意大利、法國和西班牙也是一樣。這陣地跨了，聯盟形成了。各國政府忙於戰爭。當偉大的獨裁者發言時，全世界都傾聽並且相信他。同時這大地的地基已開始撼動，世界地圖改變了。教會傾倒了，大城市下沉，海水滾燙旋轉。飢餓成了最大的勝利者。</p>
+            <p data-lang="zh-CN">死神统治了世界。他打击那些充满骄傲和财富的国家。那些古老的种族和恐怖主义的伙伴们寻找胜利的快乐。美洲大陆成了坟地。意大利、法国和西班牙也是一样。这阵地跨了，联盟形成了。各國政府忙於战争。当伟大的独裁者发言时，全世界都倾听并且相信他。同时这大地的地基已开始撼动，世界地图改变了。教会倾倒了，大城市下沉，海水滚烫旋转。饥饿成了最大的胜利者。</p>
+            <p data-lang="en">Death ruled the world. He struck those countries full of pride and wealth. Those ancient races and terrorism partners sought the joy of victory. The American continent became a graveyard. Italy, France, and Spain were the same. This position collapsed, alliances formed. Governments were busy with war. When the great dictator spoke, the whole world listened and believed him. Meanwhile, the foundations of this land began to shake, and the world map changed. Churches fell, big cities sank, and seawater churned scalding hot. Hunger became the greatest victor.</p>
+            <p data-lang="ja">死者は世界を支配しました。彼は驕慢と富で満ちた国を打ちました。那些古いの種族とテロリズムのパートナーたちは勝利の喜びを求めました。アメリカ大陸は墓地になりました。イタリア、フランス、スペインも同じでした。この陣地は崩壊し、同盟が形成されました。政府は戦争で忙しかったです。伟大的独裁者が发言したとき、全世界は聞いて信じていました。同時にこの土地の基礎が揺れ始め、世界地図が変化しました。教会は倒れ、大都市は沈み、海水は熱々になりました。餓死が最大の勝利者になりました。</p>
+            <p data-lang="ko">죽음이 세계를 지배했습니다. 그는骄傲과 富로 가득한 국가들을 쳤습니다.那些古 Racial种族와 테러 파트너들은勝利의 기쁨을 찾았습니다. 아메리카 대륙은 무덤이 되었습니다. 이탈리아, 프랑스, 스페인도 마찬가지였습니다. 이 진지는 무너지고 동맹이 형성되었습니다. 정부들은 전쟁으로 바빴습니다.伟大的 독재자가发言했을 때,全世界는 듣고 믿었습니다. 동시에 이 땅의 기초가 흔들리기 시작했고, 세계 지도가变了했습니다. 교회는 무너지고, 대도시는 침몰했으며, 바닷물이 끓고졌습니다. 기아가 최대의 승자가 되었습니다.</p>
+            <p data-lang="es">La muerte gobernó el mundo. Golpeó a aquellos países llenos de orgullo y riqueza. Aquellas razas antiguas y socios del terrorismo buscaron la alegría de la victoria. El continente americano se convirtió en un cementerio. Italia, Francia y España fueron lo mismo. Esta posición colapsó, se formaron alianzas. Los gobiernos estaban ocupados con la guerra. Cuando el gran dictador habló, el mundo entero escuchó y le creyó. Mientras tanto, los cimientos de esta tierra comenzaron a temblar, y el mapa del mundo cambió. Las iglesias cayeron, las grandes ciudades se hundieron, y el agua del mar hirvió. El hambre se convirtió en el mayor vencedor.</p>
+            <p data-lang="fr">La mort a gouverné le monde. Il a frappé ces pays remplis d'orgueil et de richesse. Ces anciennes races et partenaires du terrorisme ont cherché la joie de la victoire. Le continent américain est devenu un cimetière. L'Italie, la France et l'Espagne étaient pareilles. Cette position s'est effondrée, des alliances se sont formées. Les gouvernements étaient occupés par la guerre. Quand le grand dictateur a parlé, le monde entier a écouté et l'a cru. Pendant ce temps, les fondations de cette terre ont commencé à trembler, et la carte du monde a changé. Les églises sont tombées, les grandes villes ont coulé, et l'eau de mer a bouilli. La faim est devenue le plus grand vencedor.</p>
+            <p data-lang="de">Der Tod regierte die Welt. Er schlug jene Länder, die voller Stolz und Reichtum waren. Diese alten Rassen und Terrorismus-Partner suchten die Freude des Sieges. Der amerikanische Kontinent wurde zu einem Friedhof. Italien, Frankreich und Spanien waren dasselbe. Diese Position brach zusammen, Allianzen bildeten sich. Regierungen waren mit Krieg beschäftigt. Als der große Diktator sprach, hörte die ganze Welt zu und glaubte ihm. Inzwischen begannen die Grundlagen dieses Landes zu beben, und die Weltkarte veränderte sich. Kirchen fielen, große Städte versanken, und Meerwasser kochte. Hunger wurde zum größten Sieger.</p>
+            
+            <h2 data-lang="zh-TW">第八次機會</h2>
+            <h2 data-lang="zh-CN">第八次机会</h2>
+            <h2 data-lang="en">Eighth Chance</h2>
+            <h2 data-lang="ja">八番目の機会</h2>
+            <h2 data-lang="ko">여덟 번째 기회</h2>
+            <h2 data-lang="es">Octava Oportunidad</h2>
+            <h2 data-lang="fr">Huitième Chance</h2>
+            <h2 data-lang="de">Achte Chance</h2>
+            
+            <p data-lang="zh-TW">新的毀滅開始，武器大量使用。黑暗統治者擁有世界給予他的力量。令人驚訝致命的武器出現了，他們的肉體被分解。軍隊被溶化就像溶化的鉛一般。時間到了，太陽和月亮改變了顏色。不尋常的日蝕出現，大量的黑暗來臨了。兩億人受到傷害或毀滅。毒氣上升，害蟲增加，火舌如雨般自天空降下。</p>
+            <p data-lang="zh-CN">新的毁灭开始，武器大量使用。黑暗统治者拥有世界给予他的力量。令人惊讶致命的武器出现了，他们的肉体被分解。军队被溶化就像溶化的铅一般。时间到了，太阳和月亮改变了颜色。不寻常的日蚀出现，大量的黑暗来临了。两亿人受到伤害或毁灭。毒气上升，害虫增加，火舌如雨般自天空降下。</p>
+            <p data-lang="en">A new destruction began, and weapons were used in massive quantities. The ruler of darkness possessed the power the world gave him. Surprisingly deadly weapons appeared, their bodies were decomposed. Armies melted like melted lead. The time came, the sun and moon changed color. Unusual eclipses appeared, and massive darkness came. 200 million people were injured or destroyed. Poison gas rose, pests increased, and flames like rain fell from the sky.</p>
+            <p data-lang="ja">新しい破壊が始まり、大量の武器が使用されました。暗黒の統治者は世界が彼与服务する力を持っていました。驚くべき致死武器現れ、彼らの肉体は分解されました。軍隊は溶けた鉛のように溶融しました。時間が来ると、太陽と月が変わりました。珍しい食出現し、大量の闇が訪れました。2億人が被害を受けました。毒ガスが上昇し、害虫が増え、火の舌が空から雨のように降りました。</p>
+            <p data-lang="ko">새로운 파괴가 시작되었으며, 대량의 무기가 사용되었습니다. 어둠의 지배자는 세계가彼에게 준權力を 가지고 있었습니다. 놀라운 치명적 무기가 나타나, 그들의肉体은 분해되었습니다. 군대는融解된 납처럼融解되었습니다. 시간이 되자, 태양과 달이 색상을 바꾸었습니다. 특별한 일식이 나타나고, 대규모 어둠이 찾아왔습니다. 2억 명이 사망하거나 다쳤습니다. 독가스 상승, 해충 증가, 불꽃이 비처럼 하늘에서 떨어졌습니다.</p>
+            <p data-lang="es">Una nueva destrucción comenzó, y las armas se usaron en cantidades masivas. El gobernante de la oscuridad poseía el poder que el mundo le dio. Armas letalmente sorprendente aparecieron, sus cuerpos fueron descompuestos. Los ejércitos se derritieron como plomo fundido. Llegó el tiempo, el sol y la luna cambiaron de color. Eclipses inusuales aparecieron, y una oscuridad masiva vino. 200 millones de personas fueron heridas o destruidas. Gas venenoso aumentó, plagas incrementaron, y llamas como lluvia cayeron del cielo.</p>
+            <p data-lang="fr">Une nouvelle destruction a commencé, et les armes ont été utilisées en masses. Le ruler de l'obscurité possédait le pouvoir que le monde lui donnait. Des armes mortelles surprenantes sont apparues, leurs corps ont été décomposés. Les armées ont fondu comme du plomb fondu. Le temps est venu, le soleil et la lune ont changé de couleur. Des éclipses inhabituelles sont apparues, et une obscurité massive est venue. 200 millions de personnes ont été blessées ou détruites. Le gaz toxique a augmenté, les ravageurs ont augmenté, et des flammes comme de la pluie sont tombées du ciel.</p>
+            <p data-lang="de">Eine neue Zerstörung begann, und Waffen wurden in massiven Mengen verwendet. Der Herrscher der Dunkelheit besaß die Macht, die ihm die Welt gab. Überraschend tödliche Waffen erschienen, ihre Körper wurden zersetzt. Armeen schmolzen wie geschmolzenes Blei. Die Zeit kam, die Sonne und der Mond änderten ihre Farbe. Ungewöhnliche Finsternisse erschienen, und massive Dunkelheit kam. 200 Millionen Menschen wurden verletzt oder getötet. Giftgas stieg auf, Schädlinge nahmen zu, und Flammen wie Regen fielen vom Himmel.</p>
             
             <div class="hope">
-                <strong>然而在無盡的苦惱中，希望之光出現。那是光明，那是這星球的聲音。這光的領袖打倒了黑暗。新的時代來臨了，和平的道路終於來臨了。真正的自由終於被實現。</strong>
+                <strong data-lang="zh-TW">然而在無盡的苦惱中，希望之光出現。那是光明，那是這星球的聲音。這光的領袖打倒了黑暗。新的時代來臨了，和平的道路終於來臨了。真正的自由終於被實現。</strong>
+                <strong data-lang="zh-CN">然而在无尽的苦恼中，希望之光出现。那是光明，那是这星球的声音。这光的领袖打倒了黑暗。新的时代来临了，和平的道路终于来临了。真正的自由终于被实现。</strong>
+                <strong data-lang="en">However, in endless troubles, the light of hope appeared. That was light, that was the voice of this planet. The leader of this light defeated darkness. A new era came, and the path to peace finally arrived. True freedom was finally achieved.</strong>
+                <strong data-lang="ja">しかし、無限の Troubleの中で、希望之光が現れました。それは光でした、それはこの惑星の声でした。この光の指導者は暗闘に打ち勝ちました。新時代が来て、ついに和平の道がやってきました真の自由が、ついに達成されました。</strong>
+                <strong data-lang="ko">그러나 무한한 문제 속에서 희망의 빛이 나타났습니다. 그것은 빛이었고, 그것은 이 행성의 목소리였습니다. 이 빛의 지도자는 어둠을 물리쳤습니다. 새로운 시대가 도래하고, 마침내 평화의 길이 arrives했습니다. 마침내 진정한 자유가 달성되었습니다.</strong>
+                <strong data-lang="es">Sin embargo, en Troubles infinitos, la luz de la esperanza apareció. Esa fue la luz, esa fue la voz de este planeta. El líder de esta luz derrotó la oscuridad. Llegó una nueva era, y el camino hacia la paz llegó finalmente. La verdadera libertad finalmente se logró.</strong>
+                <strong data-lang="fr">Cependant, dans lesTroubles infinis, la lumière de l'espoir est apparue. C'était la lumière, c'était la voix de cette planète. Le leader de cette lumière a vaincu l'obscurité. Une nouvelle ère est venue, et le chemin vers la paix est finalement arrivé. La vraie liberté a finalement été réalisée.</strong>
+                <strong data-lang="de">Jedoch in endlosen Trübsalen erschien das Licht der Hoffnung. Das war Licht, das war die Stimme dieses Planeten. Der Führer dieses Lichts besiegte die Dunkelheit. Eine neue Ära kam, und der Weg zum Frieden kam schließlich. Wahre Freiheit wurde schließlich erreicht.</strong>
             </div>
             
-            <h2>第九次機會</h2>
-            <p>這真正的靈魂導師引導著人類的命運。全世界的政府消失了，他們的政治領導人也走了。這新的課程能引領人類走向真理的知識。軍隊武器離開了人間，人類的靈性修到他們從未曾到達的境界。人類慶祝找回重生，成為能彼此真心相待的朋友與兄弟。他們與內在上帝的關係，成為他們最有價值的成就。</p>
+            <h2 data-lang="zh-TW">第九次機會</h2>
+            <h2 data-lang="zh-CN">第九次机会</h2>
+            <h2 data-lang="en">Ninth Chance</h2>
+            <h2 data-lang="ja">九番目の機会</h2>
+            <h2 data-lang="ko">아홉 번째 기회</h2>
+            <h2 data-lang="es">Novena Oportunidad</h2>
+            <h2 data-lang="fr">Neuvième Chance</h2>
+            <h2 data-lang="de">Neunte Chance</h2>
             
-            <div class="highlight">
-                如今和平是你們自己努力得來的，你們必須珍惜，不能輕視他。現在你知道其實不需要付出這痛苦的代價。不要再服從於無理的戰爭暴力之下，找到諒解的道路，沒有痛悔，也沒有怨恨。人類浴火重生了，他們的靈性提升而且滿滿的愛力，生命的真正意義���到人間......他們找到了上帝。
-            </div>
+            <p data-lang="zh-TW">這真正的靈魂導師引導著人類的命運。全世界的政府消失了，他們的政治領導人也走了。這新的課程能引領人類走向真理的知識。軍隊武器離開了人間，人類的靈性修到他們從未曾到達的境界。人類慶祝找回重生，成為能彼此真心相待的朋友與兄弟。他們與內在上帝的關係，成為他們最有價值的成就。</p>
+            <p data-lang="zh-CN">这真正的灵魂导师引导着人类的命运。全世界的政府消失了，他们的政治领导人也走了。这新的课程能引领人类走向真理的知识。军队武器离开了人间，人类的灵性修到他们从未曾到达的境界。人类庆祝找回重生，成为能彼此真心相待的朋友与兄弟。他们与内在上帝的关系，成为他们最有价值的成就。</p>
+            <p data-lang="en">This true soul guide guided humanity's fate. Governments around the world disappeared, and their political leaders also left. This new curriculum could lead humanity toward the knowledge of truth. Military weapons left humanity, and human spirituality cultivated to a realm they had never reached before. Humanity celebrated finding rebirth, becoming friends and brothers who could truly treat each other with sincerity. Their relationship with the inner God became their most valuable achievement.</p>
+            <p data-lang="ja">この真の Soulガイドは人類の運命を導きました。世界中の政府消失了し їхの政治指導者も去了りました。この新しい Curriculumは人類を真理の知識へと導くことができます。軍備武器は人類を離れ、人間の靈性は彼らが今まで到達したことが 없는領域に耘されました。人類は生まれ変わることを祝い、まさに互いに真心を持って接することができる朋友と兄弟になりました。彼らの内的上帝との関係は、最も価値のある成果となりました。</p>
+            <p data-lang="ko">이 진정한 영혼 가이드가 인류의 운명을 이끌었습니다. 전 세계 정부가 사라지고, 그들의 정치 지도자들도 떠났습니다. 이 새로운 Curriculum는 인류를 진리의 지식으로 이끌 수 있습니다. 군사 무기는 인류를 떠났고, 인간의霊성은 그들이previously 도달한 적이 없는 영역으로 Cultivated되었습니다. 인류는 재탄생을 축하하며, 서로를 진심으로 대할 수 있는 친구와 형제가 되었습니다. 그들의 내면의 신과의 관계는 가장 가치 있는 성취가 되었습니다.</p>
+            <p data-lang="es">Esta verdadera guía del alma guió el destino de la humanidad. Los gobiernos de todo el mundo desaparecieron, y sus líderes políticos también se fueron. Este nuevo currículo podría guiar a la humanidad hacia el conocimiento de la verdad. Las armas militares dejaron a la humanidad, y la espiritualidad humana se Cultivó a un realm que nunca antes habían alcanzado. La humanidad celebró encontrar el renacimiento, convirtiéndose en amigos y hermanos que podían tratarse mutuamente con sinceridad. Su relación con el Dios interno se convirtió en su logro más valioso.</p>
+            <p data-lang="fr">Ce véritable guide d'âme a guidé le destin de l'humanité. Les gouvernements du monde ont disparu, et leurs dirigeants politiques sont partis également. Ce nouveau curriculum pourrait guider l'humanité vers la connaissance de la vérité. Les armes militaires ont quitté l'humanité, et la spiritualité humaine s'est Cultivée à un realm qu'elle n'avait jamais atteint auparavant. L'humanité a célébré la trouverenée, devenant des amis et des frères qui pouvaient se traiter mutuellement avec sincérité. Leur relation avec le Dieu intérieur est devenue leur accomplissement le plus précieux.</p>
+            <p data-lang="de">Dieser wahre Seelenführer leitete das Schicksal der Menschheit. Regierungen auf der ganzen Welt verschwanden, und ihre politischen Führer gingen ebenfalls. Dieser neue Lehrplan könnte die Menschheit zum Wissen der Wahrheit führen. Militärische Waffen verließen die Menschheit, und die menschliche Spiritualität wurde auf ein Reich kultiviert, das sie zuvor nie erreicht hatte. Die Menschheit feierte die Wiedergeburt und wurde Freunde und Brüder, die einander aufrichtig behandeln konnten. Ihre Beziehung zum inneren Gott wurde ihre wertvollste Errungenschaft.</p>
+            
+            <div class="highlight" data-lang="zh-TW">如今和平是你們自己努力得來的，你們必須珍惜，不能輕視他。現在你知道其實不需要付出這痛苦的代價。不要再服從於無理的戰爭暴力之下，找到諒解的道路，沒有痛悔，也沒有怨恨。人類浴火重生了，他們的靈性提升而且滿滿的愛力，生命的真正意義降到人間......他們找到了上帝。</div>
+            <div class="highlight" data-lang="zh-CN">如今和平是你们自己努力得来的，你们必须珍惜，不能轻视他。现在你知道其实不需要付出这痛苦的代价。不要再服从於无理的战争暴力之下，找到谅解的道路，没有痛悔，也没有怨恨。人类浴火重生了，他们的灵性提升而且满满的爱力，生命的真正意义降到人间......他们找到了上帝。</div>
+            <div class="highlight" data-lang="en">Now peace is earned through your own hard work, you must cherish it, do not belittle it. Now you know that in fact there is no need to pay this painful price. No longer submit to unreasonable war and violence, find the path to understanding, without regret, without resentment. Humanity was reborn from the flames, their spirituality elevated and full of love, the true meaning of life came to the world...... they found God.</div>
+            <div class="highlight" data-lang="ja">今、平日は你自己的努力によって得られたものであり、あなたたちはそれを珍惜し、軽蔑してはなりません。今、あなたたちは実はこの痛苦の代償を支払う必要がないことを知っています。不合理な戦争や暴力に屈不再是再也不理解し合う道を見つけ、后不再有任何遗憾或怨恨。人類は火から生まれ変わり，他们的灵性提升了，充满了爱，生命的真正意义来到了人间……他们找到了上帝。</div>
+            <div class="highlight" data-lang="ko">이제 평정은 당신 자신의 노력으로 얻은 것이며, 당신은 그것을 소중히 해야 합니다. 이제 당신은 사실 이痛苦的 대가를 지불할 필요가 없다는 것을 알고 있습니다. 이제 더 이상 무리한 전쟁과 폭력에 복종하지 말고, 이해의 길을 찾으세요, 후회나 원한 없이. 인류는 불꽃에서 다시 태어났고, 그들의灵性는 향상되었고 사랑으로 가득하며, 삶의 진정한 의미가 세상으로 왔습니다...... 그들은上帝를 찾았습니다.</div>
+            <div class="highlight" data-lang="es">Ahora la paz se gana con tu propio trabajo duro, debes apreciarla, no subestimarla. Ahora sabes que en realidad no hay necesidad de pagar este precio doloroso. Ya no te sometas a guerras irrazonables y violencia, encuentra el camino hacia la comprensión, sin arrepentimiento, sin resentimiento. La humanidad renació de las llamas, su espiritualidad elevada y llena de amor, el verdadero significado de la vida llegó al mundo...... encontraron a Dios.</div>
+            <div class="highlight" data-lang="fr">Maintenant la paix est gagnée par votre propre dur labeur, vous devez la chérir, ne la sous-estimez pas. Maintenant vous savez qu'en fait il n'y a pas besoin de payer ce prix douloureux. Ne soumettez plus à la guerre déraisonnable et à la violence, trouvez le chemin vers la compréhension, sans regret, sans ressentiment. L'humanité est née des flammes, sa spiritualité élevée et pleine d'amour, la vraie signification de la vie est venue au monde...... ils ont trouvé Dieu.</div>
+            <div class="highlight" data-lang="de">Jetzt wird Frieden durch Ihre eigene harte Arbeit verdient, Sie müssen ihn schätzen, nicht unterschätzen. Jetzt wissen Sie, dass es tatsächlich nicht nötig ist, diesen schmerzhaften Preis zu zahlen. Unterwerfen Sie sich nicht mehr unter unvernünftigen Krieg und Gewalt, finden Sie den Weg zum Verständnis, ohne Bedauern, ohne Groll. Die Menschheit wurde aus den Flammen wiedergeboren, ihre Spiritualität erhöht und voller Liebe, die wahre Bedeutung des Lebens kam in die Welt...... sie fanden Gott.</div>
         </div>
         
-        <p class="note">
-            注：此預言來自 geocities.ws/futureufo，僅供參考，請勿過度迷信。<br>
-            預言聽聽，姑妄聽之。
-        </p>
+        <p class="note" data-lang="zh-TW">注：此預言來自 geocities.ws/futureufo，僅供參考，請勿過度迷信。<br>預言聽聽，姑妄聽之。</p>
+        <p class="note" data-lang="zh-CN">注：此预言来自 geocities.ws/futureufo，仅供参考，请勿过度迷信。<br>预言听听，姑妄听之。</p>
+        <p class="note" data-lang="en">Note: This prophecy comes from geocities.ws/futureufo, for reference only, please do not be overly superstitious.<br>Take prophecies with a grain of salt.</p>
+        <p class="note" data-lang="ja">注：この予言は geocities.ws/futureufo からのものであり、仅供参考、信憑性は求めていません。<br>眉に唾を付けて予言を聞いてください。</p>
+        <p class="note" data-lang="ko">참고: 이 예언은 geocities.ws/futureufo 에서 왔으며 참조용일 뿐過信하지 마세요.<br>예언은 비판적으로 판단하세요.</p>
+        <p class="note" data-lang="es">Nota: Esta profecía viene de geocities.ws/futureufo, solo como referencia, por favor no sea demasiado supersticioso.<br>Tome las profecías con cautela.</p>
+        <p class="note" data-lang="fr">Note: Cette prophétie vient de geocities.ws/futureufo, pour référence seulement, s'il vous plaît ne pas être trop superstitieux.<br>Prenez les prophéties avec un grain de sel.</p>
+        <p class="note" data-lang="de">Hinweis: Diese Prophezeiung kommt von geocities.ws/futureufo, nur zur Referenz, bitte nicht zu abergläubisch sein.<br>Prophezeiungen kritisch betrachten.</p>
+        <p class="note" data-lang="pt">Nota: Esta profecia vem de geocities.ws/futureufo, apenas para referência, por favor não seja(supersticioso.<br>Tome as profecias com cautela.</p>
+        <p class="note" data-lang="ru">Примечание: Это пророчество с geocities.ws/futureufo, только для справки, пожалуйста, не будьте слишком суеверны.<br>Относитесь к пророчествам с осторожностью.</p>
+        <p class="note" data-lang="ar">ملاحظة: هذه النبوءة من geocities.ws/futureufo، للمرجعية فقط، يرجى عدم Being Too Superstitious.<br>خذ التنبؤات بحذر.</p>
+        <p class="note" data-lang="hi">नोट: यह भविष्यवाणी geocities.ws/futureufo से है, केवल संदर्भ के लिए, कृपया बहुत अंधविश्वासी न हों।<br>भविष्यवाणी को सावधानी से लें।</p>
+        <p class="note" data-lang="th">หมายเหตุ: คำทำนายนี้มาจาก geocities.ws/futureufo ใช้เป็นข้อมูลอ้างอิงเท่านั้น กรุณาอย่าเชื่อมาก<br>รับคำทำนายด้วยความระมัดระวัง</p>
+        <p class="note" data-lang="vi">Lưu ý: Tiên tri này đến từ geocities.ws/futureufo, chỉ để tham khảo, xin đừng quá mê tín.<br>Hãy đánh giá tiên tri cẩn thận.</p>
     </div>
 </body>
 </html>
